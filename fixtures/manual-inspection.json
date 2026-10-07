@@ -1,0 +1,1413 @@
+{
+  "schemaVersion": 1,
+  "platform": "Windows 11",
+  "method": "代理逐一查看 78 张实际浏览器截图的 20 张联系表；不是用户访谈。像素/字号/位置门槛由单独自动独立真值回归验证。",
+  "records": [
+    {
+      "id": "01",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "01-bad.svg",
+      "sourceSha256": "d00773ebe46027fd13419369e37b0cf898e4623b855666f6f7804acc01e3eafa",
+      "screenshot": "01.png",
+      "screenshotSha256": "355c53fe720bd4d16931108e6f091539945951ff9883b8cb051e6cd2f8562684",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "四项阈值问题可见；细线标注在四幅图位置一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "02",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "02-fixed.svg",
+      "sourceSha256": "479f6eb60c173d7f6c7928d1fa16d7bc5df7b274067260ede4ffc71f725f4434",
+      "screenshot": "02.png",
+      "screenshotSha256": "21134623e4a771892c68e0bb49a928f82778354ff39354c7d0eef08abac9d95a",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "修正版无阈值问题，布局与原图一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "03",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "03-144pt.svg",
+      "sourceSha256": "1900635179229598f934ebc7e9008570a350605d7f03ec337c021ae55fdec4c1",
+      "screenshot": "03.png",
+      "screenshotSha256": "2bdb7b251c45b0fcdf08820de6b2cd037cef8637bc927b9f7ce0f9e7e712ac82",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "普通相似变换的文字与线条位置一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "04",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "04-rotate.svg",
+      "sourceSha256": "a01a47e76bb62bfa243cabbdb5bdae7b97ba1fc99c64cf88ea24ece4e07fb38c",
+      "screenshot": "04.png",
+      "screenshotSha256": "ed9ad172337895e6a7bc96da1ab6563fc95e2439e0d5591075543b720ddb9d6d",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "旋转后的标注随实际几何方向定位。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "05",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "05-uniform.svg",
+      "sourceSha256": "a83b5a57c961c7592d0b5f80a55f0b9ba317227f44fc6bad6220ea573224d5f9",
+      "screenshot": "05.png",
+      "screenshotSha256": "5215bc4ac1c0e113b4147638e89b2585cd18dfd9678ea93a23055f4f36a1bbf5",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "缩放后的 4 pt 小字被显示为问题。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "06",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "06-nonzero-viewbox.svg",
+      "sourceSha256": "75f2f47d4fafc0de41236a770b678db1be83e2c9bd02584da0732c93527623a9",
+      "screenshot": "06.png",
+      "screenshotSha256": "7bb1634e717f89025729c8379daa5d09a38fdf840a9e89672082ae6b63bab0f9",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "非零 viewBox 原点没有引入错位。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "07",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "07-inheritance.svg",
+      "sourceSha256": "c1cf73cac82908eb535b3f5dd1156d32439edd5a9cb6b6471fd90827cea84a59",
+      "screenshot": "07.png",
+      "screenshotSha256": "e843a509e4d28cb14c11f16a1477292458dd7fa9a7513f3c9448863ec0edbf6b",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "继承样式可见，文字与线条位置一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "08",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "08-units.svg",
+      "sourceSha256": "6dd9f9c223f2aa1f9b1e80bb8265600368b125f9e92f50cdfa67378c9c9a66e9",
+      "screenshot": "08.png",
+      "screenshotSha256": "0e1bbdbaaca739fa23ad44a043452cc93e25712afa6abff531038e6c52d4e16f",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "绝对单位图景一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "09",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "09-equality.svg",
+      "sourceSha256": "af3dcef2307ab06be0cb5642a0f884a7ddcd35524f55427b5f85181c0bf371ef",
+      "screenshot": "09.png",
+      "screenshotSha256": "97381a6d91115983dce7b3ed23e7dde67ab05851897cca881237b8ea35368547",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "等于阈值不产生阈值问题。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "10",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "10-tspan.svg",
+      "sourceSha256": "cfea9c5684113ee7456838d03715b3e38e61764280428694c6682d196c1790a0",
+      "screenshot": "10.png",
+      "screenshotSha256": "437d19f3d075b9cdc58576a65d4b67a02aa14d6414ea25cab05244b3f0f50527",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "直属文字与 tspan 分别呈现，5 pt 小字被标出。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "11",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "11-outline.svg",
+      "sourceSha256": "488ecf97dd6e81b7200556556e92e4a3bfd3464df97c9b6790bc4a9bba519612",
+      "screenshot": "11.png",
+      "screenshotSha256": "c43e540a98fa0c15dcd7a091ac96f367fc4638471bd0c98f56050772a0ae3a23",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "路径文字范围保持未知，无伪造字号结论。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "12",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "12-mixed.svg",
+      "sourceSha256": "343e8ceb5c3d2d171fe4c1eff1ba60ead699e9dd7513e7e2a796d64ff65593b7",
+      "screenshot": "12.png",
+      "screenshotSha256": "2822bcfbe0a97fcdb64a83ac36fc8c2aa69d082a6a50713117503f61e6f5b5e7",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "保留文字与路径文字并存，检查范围说明可见。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "13",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "13-nonuniform.svg",
+      "sourceSha256": "7010d68cebed475275cee0f9f496b1764b512c9dfe112577e7f7bb9b4ab74064",
+      "screenshot": "13.png",
+      "screenshotSha256": "043236fdb2e12116ba34da64f2262a73d0a12cd0be42eeb05c6f21c4ec7783b2",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "非相似变换仍显示图形，数值未检测状态可见。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "14",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "14-vector-effect.svg",
+      "sourceSha256": "8602a2f720f68e7f8390b3a569936676e47107a3f315aed4407a30cedff80542",
+      "screenshot": "14.png",
+      "screenshotSha256": "c561ab660d6429acf03cc625d705f90445274f237df45e8b6a3e1c52cc2b0d89",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "非缩放描边保持未检测，普通文字独立呈现。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "15",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "15-missing-font.svg",
+      "sourceSha256": "c41c2d2356529b149d16af1c718742fbb209695cd24c1890eac1aca81bdf62f7",
+      "screenshot": "15.png",
+      "screenshotSha256": "b22e58816cfc15eb92db2ec067d241c2dbaa6633af6aace78e42a3d5a204df7a",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "缺失字体的浏览器回退图景保留四模式；位置降级另有功能断言。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "16",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "16-clip-use.svg",
+      "sourceSha256": "7125ac0859a6086f15e231ae7e3d91ac9eb84e8780f52c6dc668fb8b07a19edb",
+      "screenshot": "16.png",
+      "screenshotSha256": "0884d3d9518bbc3a9483029e9ab1c8cf1b2ea66236f11a2861a4a6e4ea07d473",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "defs/use 红色实例与裁剪后的窄片在四模式对应。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "17",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "17-alpha-color-patches.svg",
+      "sourceSha256": "91d11fd3424d1b29611322712d0ff14570a1de13c811e4b6ff467cd742e0561e",
+      "screenshot": "17.png",
+      "screenshotSha256": "e55eab3eb776ec3e61170d7a99ae273c1c573c66b890b6d768fc77145cb1f1a6",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "三组色块与半透明外观在四模式一致；颜色精度由独立像素断言验证。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "18",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "18-security-mutation.svg",
+      "sourceSha256": "fa64458b9a76e95f14c4d260c40b7c8737f6e2615e3407181fc59bdd450fec22",
+      "screenshot": "18.png",
+      "screenshotSha256": "2e9b15b48caf5938f584ab7e8be7dbd43c903b8c71fb85fbbb4be28396aa3abb",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "活动内容被拒绝，未显示图件或结果。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "19",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "19-limit-boundaries.svg",
+      "sourceSha256": "6f0c761ca4b598cd90aef86cb0f9d4583fe8707dd1a1b7755bb012837235387b",
+      "screenshot": "19.png",
+      "screenshotSha256": "348e4020f2dfbf21d1f511f10d9655cd01c1c85e67da696809c634b06fb9f52b",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "元素边界超限，未显示图件或结果。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "20",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "20-parse-invalid.svg",
+      "sourceSha256": "1f8716b7e166496304bdc952ad7e2215701f3d1fb554fe2e4d1b9ef17f365328",
+      "screenshot": "20.png",
+      "screenshotSha256": "da2c66bea30411db30b5fb9ea8a6d667bfba96f1c6414e59ab7ef97650389b2c",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "非法根尺寸被判 invalid，未显示图件或结果。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "21",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "21-measurement.svg",
+      "sourceSha256": "1f39b7b9278ac957b885f7925d976a688a4a321dd43092d7d7410b30d8c6e3e5",
+      "screenshot": "21.png",
+      "screenshotSha256": "0e972d756ab220b0af9a382d2d36e42dab62dc2a0c48f49e5d3cc0bc07fac70d",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "22",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "22-measurement.svg",
+      "sourceSha256": "d77a36d9774c7129fd30b560d5566f223db28150ae82c514c95f53120c7e6cd3",
+      "screenshot": "22.png",
+      "screenshotSha256": "329d6e59c3403f43f26dc836c512f5262de8c4377cdb907b0ec7c00c683797e9",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "23",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "23-measurement.svg",
+      "sourceSha256": "0c95024e3f785213467d2b26b101103766f3776bdbe2e8862204a2adb9559ded",
+      "screenshot": "23.png",
+      "screenshotSha256": "5feaa5fbae74af3d74f29da2e53da771bfe3c767fe254db7bcf466dc6b69dafe",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "24",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "24-measurement.svg",
+      "sourceSha256": "6f925a0f047710bc06397780c22d88209d9fe3829883882f8b973ae401bfb7e3",
+      "screenshot": "24.png",
+      "screenshotSha256": "140cf1a8243d770af13363b7c8bef9b161f1d8eaab88b7fbcd2c00d1ac85f4e7",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "25",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "25-measurement.svg",
+      "sourceSha256": "de443ff497cc5f19d3ee006ce45dae2a9cc238ae92fe8b6e83c94de59d9c1aa2",
+      "screenshot": "25.png",
+      "screenshotSha256": "46bca6c99a5b69b75ecd9a43f0a569af6ab878b719fb9a3d1352b612e4f77b87",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "26",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "26-measurement.svg",
+      "sourceSha256": "e4339533c316dfec216593a06e7a2a9a10eedf3ce337d949ccbf01063d6ec705",
+      "screenshot": "26.png",
+      "screenshotSha256": "1019ad172d27462bb3f9690c823b235ce98908d3b0452ac63e0538af6d5c4f54",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "27",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "27-measurement.svg",
+      "sourceSha256": "d7de2aa64a7d1d925053a77cabdf77455c3e345b5a4139d6c01335f470df1d82",
+      "screenshot": "27.png",
+      "screenshotSha256": "0a2bdb9cb2bc430d636ef3ee1eabde5648879f5f6a8ba5b25f1ccc0716988b7f",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "28",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "28-measurement.svg",
+      "sourceSha256": "aa09644c637bd783e34564f8f45f4e03e8aed40edd3e656c3e991866a4394718",
+      "screenshot": "28.png",
+      "screenshotSha256": "87032d32e5dc2720f9a1948aa1cbac3ac7129b87f259e9eab7be4a9472fe2365",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "29",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "29-measurement.svg",
+      "sourceSha256": "5c883770043b150688578fd84fcaa3cbe4a64a1dcd6028c0cb7cb65dad8aad4e",
+      "screenshot": "29.png",
+      "screenshotSha256": "606a3688d7fdc2e20305dc19ba0315a45f67d19adc2e407bb5c55de4adc7c329",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "30",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "30-measurement.svg",
+      "sourceSha256": "feb05400662175f673ef87f3d1785f381cd33be33b1075effbb10c792fb86223",
+      "screenshot": "30.png",
+      "screenshotSha256": "0995452ea97994e6815e12bee823e0d2aa42871449c7cd1782f9a1e69d80e443",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "31",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "31-measurement.svg",
+      "sourceSha256": "a9fb43dd76e7d97e35be2d72bf86e63ecb17c59be4379c4ff10e1fe816001ade",
+      "screenshot": "31.png",
+      "screenshotSha256": "8ae99cbb90a87cad89d26d4374ab927e2a8c25edad09a5413e2b7c80b003c34e",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "32",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "32-measurement.svg",
+      "sourceSha256": "6a27aa29d181ba2f3207d284eeb31df5a7c9a84f9c401b350ea181bade2ce20b",
+      "screenshot": "32.png",
+      "screenshotSha256": "605ffa11452af5751680c65d300aa6cb266ce48b26085b7172b5c17f0b01a5ce",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "33",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "33-measurement.svg",
+      "sourceSha256": "73a69f89cc96e15f0299ad1804a7d050eaa10ed9168fdf755b60438f5b12a030",
+      "screenshot": "33.png",
+      "screenshotSha256": "b0b4e884c92c4c281adacdabfe5b116160241eb3d1ab995932d884efbbd1e622",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "34",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "34-measurement.svg",
+      "sourceSha256": "332c726914347665c76d496d2baaee494d3db5b610f36bbdc1bf49b137afd4be",
+      "screenshot": "34.png",
+      "screenshotSha256": "7c102324541c9cea141cd9075f7348c45b40b89592f1e6b8d9f65b70f7c2aa58",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "35",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "35-measurement.svg",
+      "sourceSha256": "3d1009c966aefae0206ef0539fdc4de45c20c5f4c61fd59fa1cf095aeda3cf2f",
+      "screenshot": "35.png",
+      "screenshotSha256": "d8ab8e8430002f99fd50c0b65f6008eda78d06b2144dfb7d15d6515cfe95fd4d",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "36",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "36-measurement.svg",
+      "sourceSha256": "3a7dd049e6152cf6315aa624be4a53eb174d15a9809fd35aeadf0fe93a37bb24",
+      "screenshot": "36.png",
+      "screenshotSha256": "c0918ce7f27e55310d140914861181a33878e714540b375b044431ac58de3b35",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "37",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "37-measurement.svg",
+      "sourceSha256": "fbdae1bf7b34a79b1a00fd9a4c64768110b764f85bdcd20cbafd0d202adf5afa",
+      "screenshot": "37.png",
+      "screenshotSha256": "50316344c65238ce24b796f1cc7dd60db644de91e41169a92ba5919bea74bf89",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "38",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "38-measurement.svg",
+      "sourceSha256": "7f0915b2e40a01b3fcb33a9e97cfcc55c80523d3bd89c214b02c80e0406b49be",
+      "screenshot": "38.png",
+      "screenshotSha256": "6188b5f754b482b28cedb080c38280d90f38dc6d30e73b2963b570566579e88a",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "39",
+      "browser": "chromium",
+      "browserVersion": "145.0.7632.6",
+      "file": "39-measurement.svg",
+      "sourceSha256": "b0b95bf3f9a501dce0d279a74faa01d09c8cb4b978a16591b6f6b566d3721ee6",
+      "screenshot": "39.png",
+      "screenshotSha256": "f20fa65f81a22647609ed29aca6e91dcab6bca6f2173757ccae2d58ccc9ef50d",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "01",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "01-bad.svg",
+      "sourceSha256": "d00773ebe46027fd13419369e37b0cf898e4623b855666f6f7804acc01e3eafa",
+      "screenshot": "01.png",
+      "screenshotSha256": "db237d69344b33dc07425bd13d2474fb84e32a8ba3302051e989ac5e1787b961",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "四项阈值问题可见；细线标注在四幅图位置一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "02",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "02-fixed.svg",
+      "sourceSha256": "479f6eb60c173d7f6c7928d1fa16d7bc5df7b274067260ede4ffc71f725f4434",
+      "screenshot": "02.png",
+      "screenshotSha256": "876346c18bd328c3fd70a5104c951b4883356ac12ce9a777a9cc2a49ebd6ca4a",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "修正版无阈值问题，布局与原图一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "03",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "03-144pt.svg",
+      "sourceSha256": "1900635179229598f934ebc7e9008570a350605d7f03ec337c021ae55fdec4c1",
+      "screenshot": "03.png",
+      "screenshotSha256": "c3374a172a8f7d1ea2351601433cb8c1711e1b479d1d8945046cac8e23aef9fc",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "普通相似变换的文字与线条位置一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "04",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "04-rotate.svg",
+      "sourceSha256": "a01a47e76bb62bfa243cabbdb5bdae7b97ba1fc99c64cf88ea24ece4e07fb38c",
+      "screenshot": "04.png",
+      "screenshotSha256": "f9a6a318838620172006f87d5bf57c2e650f3f9d52a6c0e57bb4a9a767a27038",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "旋转后的标注随实际几何方向定位。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "05",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "05-uniform.svg",
+      "sourceSha256": "a83b5a57c961c7592d0b5f80a55f0b9ba317227f44fc6bad6220ea573224d5f9",
+      "screenshot": "05.png",
+      "screenshotSha256": "57dd24cbc8669c83172ea13e686a4c08fae3c6ac0fc52325d02996fdd7fb4782",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "缩放后的 4 pt 小字被显示为问题。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "06",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "06-nonzero-viewbox.svg",
+      "sourceSha256": "75f2f47d4fafc0de41236a770b678db1be83e2c9bd02584da0732c93527623a9",
+      "screenshot": "06.png",
+      "screenshotSha256": "ac5d637f76fbacb81ef780a4fb12425c07e8a66a22f3f52bacb37f653e029c6c",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "非零 viewBox 原点没有引入错位。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "07",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "07-inheritance.svg",
+      "sourceSha256": "c1cf73cac82908eb535b3f5dd1156d32439edd5a9cb6b6471fd90827cea84a59",
+      "screenshot": "07.png",
+      "screenshotSha256": "efda6b722db0c56cf04363972342f7b9d76dc17dd4c14a5f3564375b3547f41f",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "继承样式可见，文字与线条位置一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "08",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "08-units.svg",
+      "sourceSha256": "6dd9f9c223f2aa1f9b1e80bb8265600368b125f9e92f50cdfa67378c9c9a66e9",
+      "screenshot": "08.png",
+      "screenshotSha256": "324c7e7fbcbb528040e07d1e727a15facca4087415c4983983bdec7438cd0d5c",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "绝对单位图景一致。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "09",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "09-equality.svg",
+      "sourceSha256": "af3dcef2307ab06be0cb5642a0f884a7ddcd35524f55427b5f85181c0bf371ef",
+      "screenshot": "09.png",
+      "screenshotSha256": "766c25d8c5dd583041f1759e714771f2c16fbbf4b5336b094c341c8424ac6853",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "等于阈值不产生阈值问题。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "10",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "10-tspan.svg",
+      "sourceSha256": "cfea9c5684113ee7456838d03715b3e38e61764280428694c6682d196c1790a0",
+      "screenshot": "10.png",
+      "screenshotSha256": "d4c6d92c19f6e8fb6b7d2cac5178e1c95fa08b929f8f6f038e50e42b5c35ae0b",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "直属文字与 tspan 分别呈现，5 pt 小字被标出。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "11",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "11-outline.svg",
+      "sourceSha256": "488ecf97dd6e81b7200556556e92e4a3bfd3464df97c9b6790bc4a9bba519612",
+      "screenshot": "11.png",
+      "screenshotSha256": "cc30288d9d8f98d940fc0bc4f26857202f58ed3dfff63d808bbe5072628338aa",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "路径文字范围保持未知，无伪造字号结论。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "12",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "12-mixed.svg",
+      "sourceSha256": "343e8ceb5c3d2d171fe4c1eff1ba60ead699e9dd7513e7e2a796d64ff65593b7",
+      "screenshot": "12.png",
+      "screenshotSha256": "9c5b40f5691c7a08e31946f486fe5f9632dbac30ffc7f9385f80a7c5be227183",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "保留文字与路径文字并存，检查范围说明可见。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "13",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "13-nonuniform.svg",
+      "sourceSha256": "7010d68cebed475275cee0f9f496b1764b512c9dfe112577e7f7bb9b4ab74064",
+      "screenshot": "13.png",
+      "screenshotSha256": "449b4d5ff0ce96230098e334a1cbb9dca5f7dd0851134ca26d3d17ac6f62aef3",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "非相似变换仍显示图形，数值未检测状态可见。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "14",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "14-vector-effect.svg",
+      "sourceSha256": "8602a2f720f68e7f8390b3a569936676e47107a3f315aed4407a30cedff80542",
+      "screenshot": "14.png",
+      "screenshotSha256": "a85ffd8485b3809390c1fd9e1536280374e4d3aecdbd198f6e898f26dd95cc6e",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "非缩放描边保持未检测，普通文字独立呈现。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "15",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "15-missing-font.svg",
+      "sourceSha256": "c41c2d2356529b149d16af1c718742fbb209695cd24c1890eac1aca81bdf62f7",
+      "screenshot": "15.png",
+      "screenshotSha256": "d78228dcc7b28a3da22509faa3209de3d41cfa043661ddedcaf4a3cb715c135c",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "缺失字体的浏览器回退图景保留四模式；位置降级另有功能断言。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "16",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "16-clip-use.svg",
+      "sourceSha256": "7125ac0859a6086f15e231ae7e3d91ac9eb84e8780f52c6dc668fb8b07a19edb",
+      "screenshot": "16.png",
+      "screenshotSha256": "9ec416f483a3b9f623d7892ec24076352f1311b69940add72ce80c7458e05ca3",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "defs/use 红色实例与裁剪后的窄片在四模式对应。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "17",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "17-alpha-color-patches.svg",
+      "sourceSha256": "91d11fd3424d1b29611322712d0ff14570a1de13c811e4b6ff467cd742e0561e",
+      "screenshot": "17.png",
+      "screenshotSha256": "19002ce8c089edc4c87d61e591708655b5a5511984083837c16654479586018a",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "三组色块与半透明外观在四模式一致；颜色精度由独立像素断言验证。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "18",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "18-security-mutation.svg",
+      "sourceSha256": "fa64458b9a76e95f14c4d260c40b7c8737f6e2615e3407181fc59bdd450fec22",
+      "screenshot": "18.png",
+      "screenshotSha256": "b8eb77ae4c94401ab780b2bf7bec49767f408493c2b64b735e65022392d118b1",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "活动内容被拒绝，未显示图件或结果。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "19",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "19-limit-boundaries.svg",
+      "sourceSha256": "6f0c761ca4b598cd90aef86cb0f9d4583fe8707dd1a1b7755bb012837235387b",
+      "screenshot": "19.png",
+      "screenshotSha256": "1b78d3a85e2367b5af5212ec13a252616c0c9cbc8b7c2af4f8e4a953b67a3fdf",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "元素边界超限，未显示图件或结果。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "20",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "20-parse-invalid.svg",
+      "sourceSha256": "1f8716b7e166496304bdc952ad7e2215701f3d1fb554fe2e4d1b9ef17f365328",
+      "screenshot": "20.png",
+      "screenshotSha256": "e4390e5d70be858e7cad9c9d04ae8b311817f99baa263c7028026b8f2e2b1531",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "非法根尺寸被判 invalid，未显示图件或结果。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": false
+    },
+    {
+      "id": "21",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "21-measurement.svg",
+      "sourceSha256": "1f39b7b9278ac957b885f7925d976a688a4a321dd43092d7d7410b30d8c6e3e5",
+      "screenshot": "21.png",
+      "screenshotSha256": "bb8585faf58d3a42cd62c830f7a64e8e52ebb8ef5643eb47c95a182517256eac",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "22",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "22-measurement.svg",
+      "sourceSha256": "d77a36d9774c7129fd30b560d5566f223db28150ae82c514c95f53120c7e6cd3",
+      "screenshot": "22.png",
+      "screenshotSha256": "cc9a6397c83bc6eb114220c0174b9b4f75faabb181f25fc5766cbf5e80adb3ae",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "23",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "23-measurement.svg",
+      "sourceSha256": "0c95024e3f785213467d2b26b101103766f3776bdbe2e8862204a2adb9559ded",
+      "screenshot": "23.png",
+      "screenshotSha256": "4ff9e80dd13e02ca2254e8c63f31cbe3120306ffe30d31babcd05c2a94614b9c",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "24",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "24-measurement.svg",
+      "sourceSha256": "6f925a0f047710bc06397780c22d88209d9fe3829883882f8b973ae401bfb7e3",
+      "screenshot": "24.png",
+      "screenshotSha256": "2f144518a700dd4cd926af20bc0cb2b9d532f247fc2074d24ddefd183ecb90e2",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "25",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "25-measurement.svg",
+      "sourceSha256": "de443ff497cc5f19d3ee006ce45dae2a9cc238ae92fe8b6e83c94de59d9c1aa2",
+      "screenshot": "25.png",
+      "screenshotSha256": "9b5ebdc04a19aec81bdde8ffe3bd5420cba6749d1ebcb2526daca77a98530311",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "26",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "26-measurement.svg",
+      "sourceSha256": "e4339533c316dfec216593a06e7a2a9a10eedf3ce337d949ccbf01063d6ec705",
+      "screenshot": "26.png",
+      "screenshotSha256": "664901b3ca41786bd4c227149d4ddcf0485e219fa48a7ff779f66a370bdc3015",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "27",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "27-measurement.svg",
+      "sourceSha256": "d7de2aa64a7d1d925053a77cabdf77455c3e345b5a4139d6c01335f470df1d82",
+      "screenshot": "27.png",
+      "screenshotSha256": "44f06cbe6ad32a46d24091179686f798dc3a019fc320fc864f1b423f9e12bfac",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "28",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "28-measurement.svg",
+      "sourceSha256": "aa09644c637bd783e34564f8f45f4e03e8aed40edd3e656c3e991866a4394718",
+      "screenshot": "28.png",
+      "screenshotSha256": "ced327c1125bd6b56767c0c272b61dcb5fc5e70173051c09936c92be5c8ae939",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "29",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "29-measurement.svg",
+      "sourceSha256": "5c883770043b150688578fd84fcaa3cbe4a64a1dcd6028c0cb7cb65dad8aad4e",
+      "screenshot": "29.png",
+      "screenshotSha256": "fb1a91f4e8bf565a8ee87382b8007ee9ac9b81ad65e057b45f8e5b038e6578c0",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "30",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "30-measurement.svg",
+      "sourceSha256": "feb05400662175f673ef87f3d1785f381cd33be33b1075effbb10c792fb86223",
+      "screenshot": "30.png",
+      "screenshotSha256": "1c819de18f2e3dda87782998b18d4e2e7bab91c5e6d68ead0f7a65b3c09ba31b",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "31",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "31-measurement.svg",
+      "sourceSha256": "a9fb43dd76e7d97e35be2d72bf86e63ecb17c59be4379c4ff10e1fe816001ade",
+      "screenshot": "31.png",
+      "screenshotSha256": "5756342d079ddc488ce2b4ec22d2ca742c00f4373cca1618a465b06ed6a022f4",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "32",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "32-measurement.svg",
+      "sourceSha256": "6a27aa29d181ba2f3207d284eeb31df5a7c9a84f9c401b350ea181bade2ce20b",
+      "screenshot": "32.png",
+      "screenshotSha256": "ef16497fbf1e1af9852548bdef428c203c463e5a037f55ea4a33ad16335abb8c",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "33",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "33-measurement.svg",
+      "sourceSha256": "73a69f89cc96e15f0299ad1804a7d050eaa10ed9168fdf755b60438f5b12a030",
+      "screenshot": "33.png",
+      "screenshotSha256": "5f7f0b0dbb3e7965d7dd3af5b49237eebe09a2a0d536df3272f5cbac4a0efda0",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "34",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "34-measurement.svg",
+      "sourceSha256": "332c726914347665c76d496d2baaee494d3db5b610f36bbdc1bf49b137afd4be",
+      "screenshot": "34.png",
+      "screenshotSha256": "951e0c1faa1dbc62e76cd590b15e7d10c0269dce0e014c4944c37426acdeb475",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "35",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "35-measurement.svg",
+      "sourceSha256": "3d1009c966aefae0206ef0539fdc4de45c20c5f4c61fd59fa1cf095aeda3cf2f",
+      "screenshot": "35.png",
+      "screenshotSha256": "7fa2fbd21a2c34f897bfb78b8861b348703ce4a9441b533c1e2e56bb16530fca",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "36",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "36-measurement.svg",
+      "sourceSha256": "3a7dd049e6152cf6315aa624be4a53eb174d15a9809fd35aeadf0fe93a37bb24",
+      "screenshot": "36.png",
+      "screenshotSha256": "02cbcebf4b9c2ac6a347c2fb078309da306866465518ba801027f103af603af3",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "37",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "37-measurement.svg",
+      "sourceSha256": "fbdae1bf7b34a79b1a00fd9a4c64768110b764f85bdcd20cbafd0d202adf5afa",
+      "screenshot": "37.png",
+      "screenshotSha256": "69df2daebe2d86e62deb8e035e1eb37d22c1ccbfd8a55ce63a6d0c3c10e09f44",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "38",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "38-measurement.svg",
+      "sourceSha256": "7f0915b2e40a01b3fcb33a9e97cfcc55c80523d3bd89c214b02c80e0406b49be",
+      "screenshot": "38.png",
+      "screenshotSha256": "1f04ec9b4f7617479cdf103ffeec4edaeed6d93bcbaf02a8e712354f0445b52f",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    },
+    {
+      "id": "39",
+      "browser": "firefox",
+      "browserVersion": "146.0.1",
+      "file": "39-measurement.svg",
+      "sourceSha256": "b0b95bf3f9a501dce0d279a74faa01d09c8cb4b978a16591b6f6b566d3721ee6",
+      "screenshot": "39.png",
+      "screenshotSha256": "c41207bec0ef31f45142558c9d287c33225dd4dd55a6033163fda0f8da070cdc",
+      "reviewer": "Codex agent visual inspection",
+      "viewport": {
+        "width": 1200,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "observation": "已知小字与细线两项问题可见，正常对象未被标记，四模式标注对齐。",
+      "visualResult": "reviewed",
+      "automaticMeasurementAcceptance": true
+    }
+  ],
+  "reviewedAtUtc": "2026-10-07T07:42:54.171153+00:00",
+  "reviewPhase": "Task3 second rendering candidate: sequence1024 / expanded2048, asynchronous hit layer"
+}

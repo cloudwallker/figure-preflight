@@ -1,0 +1,6 @@
+<!doctype html><meta charset="utf-8"><title>Input module harness</title>
+<input aria-label="Responsiveness probe"><output id="ready">loading</output>
+<script type="module">
+try { window.inputModule = await import('/input.js'); } catch(e) { window.moduleError = String(e); }
+document.getElementById('ready').textContent='ready';
+</script>

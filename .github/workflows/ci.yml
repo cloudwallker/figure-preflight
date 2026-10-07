@@ -1,0 +1,40 @@
+name: Verify FigurePreflight
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.15.0
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: python -m venv .venv
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python -m pip install --require-hashes -r tools/requirements-fixtures.txt
+      - if: runner.os != 'Windows'
+        run: .venv/bin/python -m pip install --require-hashes -r tools/requirements-fixtures.txt
+      - if: runner.os == 'Windows'
+        run: npx playwright install chromium firefox
+      - if: runner.os != 'Windows'
+        run: npx playwright install --with-deps chromium firefox
+      - run: npm run fixtures:generate
+      - run: npm run fixtures:verify
+      - run: git diff --exit-code -- fixtures
+      - run: npm test
+      - run: npm run build
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-evidence-${{ matrix.os }}
+          path: test-results

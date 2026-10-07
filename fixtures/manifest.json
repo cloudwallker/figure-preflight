@@ -1,0 +1,858 @@
+{
+  "schemaVersion": 1,
+  "actualFileCount": 39,
+  "actualThemeCount": 20,
+  "plannedThemeCount": 20,
+  "themeIds": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+  ],
+  "measurementAcceptanceIds": [
+    "01",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39"
+  ],
+  "measurementAcceptanceCount": 20,
+  "entries": [
+    {
+      "id": "01",
+      "file": "01-bad.svg",
+      "sha256": "d00773ebe46027fd13419369e37b0cf898e4623b855666f6f7804acc01e3eafa",
+      "themeIds": [
+        "01"
+      ],
+      "measurementAcceptanceIds": [
+        "01"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/01-bad.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 3,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#01"
+      }
+    },
+    {
+      "id": "02",
+      "file": "02-fixed.svg",
+      "sha256": "479f6eb60c173d7f6c7928d1fa16d7bc5df7b274067260ede4ffc71f725f4434",
+      "themeIds": [
+        "02"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/02-fixed.svg",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#02"
+      }
+    },
+    {
+      "id": "03",
+      "file": "03-144pt.svg",
+      "sha256": "1900635179229598f934ebc7e9008570a350605d7f03ec337c021ae55fdec4c1",
+      "themeIds": [
+        "03"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/03-144pt.svg",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#03"
+      }
+    },
+    {
+      "id": "04",
+      "file": "04-rotate.svg",
+      "sha256": "a01a47e76bb62bfa243cabbdb5bdae7b97ba1fc99c64cf88ea24ece4e07fb38c",
+      "themeIds": [
+        "04"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/04-rotate.svg",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#04"
+      }
+    },
+    {
+      "id": "05",
+      "file": "05-uniform.svg",
+      "sha256": "a83b5a57c961c7592d0b5f80a55f0b9ba317227f44fc6bad6220ea573224d5f9",
+      "themeIds": [
+        "05"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/05-uniform.svg",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#05"
+      }
+    },
+    {
+      "id": "06",
+      "file": "06-nonzero-viewbox.svg",
+      "sha256": "75f2f47d4fafc0de41236a770b678db1be83e2c9bd02584da0732c93527623a9",
+      "themeIds": [
+        "06"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/06-nonzero-viewbox.svg",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#06"
+      }
+    },
+    {
+      "id": "07",
+      "file": "07-inheritance.svg",
+      "sha256": "c1cf73cac82908eb535b3f5dd1156d32439edd5a9cb6b6471fd90827cea84a59",
+      "themeIds": [
+        "07"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/07-inheritance.svg",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#07"
+      }
+    },
+    {
+      "id": "08",
+      "file": "08-units.svg",
+      "sha256": "6dd9f9c223f2aa1f9b1e80bb8265600368b125f9e92f50cdfa67378c9c9a66e9",
+      "themeIds": [
+        "08"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/08-units.svg",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#08"
+      }
+    },
+    {
+      "id": "09",
+      "file": "09-equality.svg",
+      "sha256": "af3dcef2307ab06be0cb5642a0f884a7ddcd35524f55427b5f85181c0bf371ef",
+      "themeIds": [
+        "09"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/09-equality.svg",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#09"
+      }
+    },
+    {
+      "id": "10",
+      "file": "10-tspan.svg",
+      "sha256": "cfea9c5684113ee7456838d03715b3e38e61764280428694c6682d196c1790a0",
+      "themeIds": [
+        "10"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/10-tspan.svg",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#10"
+      }
+    },
+    {
+      "id": "11",
+      "file": "11-outline.svg",
+      "sha256": "488ecf97dd6e81b7200556556e92e4a3bfd3464df97c9b6790bc4a9bba519612",
+      "themeIds": [
+        "11"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#11"
+      }
+    },
+    {
+      "id": "12",
+      "file": "12-mixed.svg",
+      "sha256": "343e8ceb5c3d2d171fe4c1eff1ba60ead699e9dd7513e7e2a796d64ff65593b7",
+      "themeIds": [
+        "12"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#12"
+      }
+    },
+    {
+      "id": "13",
+      "file": "13-nonuniform.svg",
+      "sha256": "7010d68cebed475275cee0f9f496b1764b512c9dfe112577e7f7bb9b4ab74064",
+      "themeIds": [
+        "13"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#13"
+      }
+    },
+    {
+      "id": "14",
+      "file": "14-vector-effect.svg",
+      "sha256": "8602a2f720f68e7f8390b3a569936676e47107a3f315aed4407a30cedff80542",
+      "themeIds": [
+        "14"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#14"
+      }
+    },
+    {
+      "id": "15",
+      "file": "15-missing-font.svg",
+      "sha256": "c41c2d2356529b149d16af1c718742fbb209695cd24c1890eac1aca81bdf62f7",
+      "themeIds": [
+        "15"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#15"
+      }
+    },
+    {
+      "id": "16",
+      "file": "16-clip-use.svg",
+      "sha256": "7125ac0859a6086f15e231ae7e3d91ac9eb84e8780f52c6dc668fb8b07a19edb",
+      "themeIds": [
+        "16"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#16"
+      }
+    },
+    {
+      "id": "17",
+      "file": "17-alpha-color-patches.svg",
+      "sha256": "91d11fd3424d1b29611322712d0ff14570a1de13c811e4b6ff467cd742e0561e",
+      "themeIds": [
+        "17"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#17"
+      }
+    },
+    {
+      "id": "18",
+      "file": "18-security-mutation.svg",
+      "sha256": "fa64458b9a76e95f14c4d260c40b7c8737f6e2615e3407181fc59bdd450fec22",
+      "themeIds": [
+        "18"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "rejected",
+      "expectedPreview": null,
+      "expectedRun": null,
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#18"
+      }
+    },
+    {
+      "id": "19",
+      "file": "19-limit-boundaries.svg",
+      "sha256": "6f0c761ca4b598cd90aef86cb0f9d4583fe8707dd1a1b7755bb012837235387b",
+      "themeIds": [
+        "19"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "limited",
+      "expectedPreview": null,
+      "expectedRun": null,
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#19"
+      }
+    },
+    {
+      "id": "20",
+      "file": "20-parse-invalid.svg",
+      "sha256": "1f8716b7e166496304bdc952ad7e2215701f3d1fb554fe2e4d1b9ef17f365328",
+      "themeIds": [
+        "20"
+      ],
+      "measurementAcceptanceIds": [],
+      "expectedParse": "invalid",
+      "expectedPreview": null,
+      "expectedRun": null,
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "generator parameters; counterexample coverage only",
+      "injectedProblems": null,
+      "manualInspection": {
+        "record": "manual-inspection.json#20"
+      }
+    },
+    {
+      "id": "21",
+      "file": "21-measurement.svg",
+      "sha256": "1f39b7b9278ac957b885f7925d976a688a4a321dd43092d7d7410b30d8c6e3e5",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "21"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/21-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#21"
+      }
+    },
+    {
+      "id": "22",
+      "file": "22-measurement.svg",
+      "sha256": "d77a36d9774c7129fd30b560d5566f223db28150ae82c514c95f53120c7e6cd3",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "22"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/22-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#22"
+      }
+    },
+    {
+      "id": "23",
+      "file": "23-measurement.svg",
+      "sha256": "0c95024e3f785213467d2b26b101103766f3776bdbe2e8862204a2adb9559ded",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "23"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/23-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#23"
+      }
+    },
+    {
+      "id": "24",
+      "file": "24-measurement.svg",
+      "sha256": "6f925a0f047710bc06397780c22d88209d9fe3829883882f8b973ae401bfb7e3",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "24"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/24-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#24"
+      }
+    },
+    {
+      "id": "25",
+      "file": "25-measurement.svg",
+      "sha256": "de443ff497cc5f19d3ee006ce45dae2a9cc238ae92fe8b6e83c94de59d9c1aa2",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "25"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/25-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#25"
+      }
+    },
+    {
+      "id": "26",
+      "file": "26-measurement.svg",
+      "sha256": "e4339533c316dfec216593a06e7a2a9a10eedf3ce337d949ccbf01063d6ec705",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "26"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/26-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#26"
+      }
+    },
+    {
+      "id": "27",
+      "file": "27-measurement.svg",
+      "sha256": "d7de2aa64a7d1d925053a77cabdf77455c3e345b5a4139d6c01335f470df1d82",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "27"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/27-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#27"
+      }
+    },
+    {
+      "id": "28",
+      "file": "28-measurement.svg",
+      "sha256": "aa09644c637bd783e34564f8f45f4e03e8aed40edd3e656c3e991866a4394718",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "28"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/28-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#28"
+      }
+    },
+    {
+      "id": "29",
+      "file": "29-measurement.svg",
+      "sha256": "5c883770043b150688578fd84fcaa3cbe4a64a1dcd6028c0cb7cb65dad8aad4e",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "29"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/29-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#29"
+      }
+    },
+    {
+      "id": "30",
+      "file": "30-measurement.svg",
+      "sha256": "feb05400662175f673ef87f3d1785f381cd33be33b1075effbb10c792fb86223",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "30"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/30-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#30"
+      }
+    },
+    {
+      "id": "31",
+      "file": "31-measurement.svg",
+      "sha256": "a9fb43dd76e7d97e35be2d72bf86e63ecb17c59be4379c4ff10e1fe816001ade",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "31"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/31-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#31"
+      }
+    },
+    {
+      "id": "32",
+      "file": "32-measurement.svg",
+      "sha256": "6a27aa29d181ba2f3207d284eeb31df5a7c9a84f9c401b350ea181bade2ce20b",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "32"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/32-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#32"
+      }
+    },
+    {
+      "id": "33",
+      "file": "33-measurement.svg",
+      "sha256": "73a69f89cc96e15f0299ad1804a7d050eaa10ed9168fdf755b60438f5b12a030",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "33"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/33-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#33"
+      }
+    },
+    {
+      "id": "34",
+      "file": "34-measurement.svg",
+      "sha256": "332c726914347665c76d496d2baaee494d3db5b610f36bbdc1bf49b137afd4be",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "34"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/34-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#34"
+      }
+    },
+    {
+      "id": "35",
+      "file": "35-measurement.svg",
+      "sha256": "3d1009c966aefae0206ef0539fdc4de45c20c5f4c61fd59fa1cf095aeda3cf2f",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "35"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/35-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#35"
+      }
+    },
+    {
+      "id": "36",
+      "file": "36-measurement.svg",
+      "sha256": "3a7dd049e6152cf6315aa624be4a53eb174d15a9809fd35aeadf0fe93a37bb24",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "36"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/36-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#36"
+      }
+    },
+    {
+      "id": "37",
+      "file": "37-measurement.svg",
+      "sha256": "fbdae1bf7b34a79b1a00fd9a4c64768110b764f85bdcd20cbafd0d202adf5afa",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "37"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/37-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#37"
+      }
+    },
+    {
+      "id": "38",
+      "file": "38-measurement.svg",
+      "sha256": "7f0915b2e40a01b3fcb33a9e97cfcc55c80523d3bd89c214b02c80e0406b49be",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "38"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/38-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#38"
+      }
+    },
+    {
+      "id": "39",
+      "file": "39-measurement.svg",
+      "sha256": "b0b95bf3f9a501dce0d279a74faa01d09c8cb4b978a16591b6f6b566d3721ee6",
+      "themeIds": [],
+      "measurementAcceptanceIds": [
+        "39"
+      ],
+      "expectedParse": "accepted",
+      "expectedPreview": "enabled",
+      "expectedRun": "complete",
+      "textScope": "direct retained text/tspan; outlined glyph text remains unknown",
+      "strokeScope": "visible direct geometry and direct text stroke; defs excluded and use unassessed",
+      "truthSource": "text-reference.json#files/39-measurement.svg",
+      "injectedProblems": {
+        "SMALL_TEXT": 1,
+        "THIN_STROKE": 1
+      },
+      "manualInspection": {
+        "record": "manual-inspection.json#39"
+      }
+    }
+  ],
+  "pendingThemes": [],
+  "parameterizedSafetyVariants": "tests/input.browser.spec.ts and tests/input-review.browser.spec.ts and tests/render-budget.browser.spec.ts and tests/performance-cases.ts; separate from file and M counts"
+}

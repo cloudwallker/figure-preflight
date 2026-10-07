@@ -1,0 +1,2629 @@
+{
+  "01-bad.svg": {
+    "sha256": "d00773ebe46027fd13419369e37b0cf898e4623b855666f6f7804acc01e3eafa",
+    "root": {
+      "width": "240.944882pt",
+      "height": "155.905512pt",
+      "viewBox": "0 0 240.944882 155.905512",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "clipPath": [
+        "id"
+      ],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "clip-path",
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "clip-path",
+        "d",
+        "id",
+        "style"
+      ],
+      "rect": [
+        "height",
+        "width",
+        "x",
+        "y"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ],
+      "use": [
+        "style",
+        "x",
+        "y",
+        "{http://www.w3.org/1999/xlink}href"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #cc3333; stroke: #cc3333",
+      "fill: #ffffff",
+      "fill: #ffffff; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter",
+      "fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square",
+      "fill: none; stroke: #339944; stroke-width: 0.8; stroke-linecap: square",
+      "fill: none; stroke: #cc3333; stroke-width: 0.15; stroke-linecap: square",
+      "fill: none; stroke: #cc3333; stroke-width: 0.8; stroke-linecap: square",
+      "font: 5.5px 'DejaVu Sans'; text-anchor: middle",
+      "font: 5.75px 'DejaVu Sans'; text-anchor: start",
+      "font: 5px 'DejaVu Sans'; text-anchor: start",
+      "font: 8px 'DejaVu Sans'; text-anchor: end",
+      "font: 8px 'DejaVu Sans'; text-anchor: middle",
+      "stroke: #000000; stroke-width: 0.8",
+      "stroke: #cc3333"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "clipPath": 1,
+      "creator": 1,
+      "defs": 5,
+      "format": 1,
+      "g": 66,
+      "metadata": 1,
+      "path": 13,
+      "rect": 1,
+      "style": 1,
+      "svg": 1,
+      "text": 16,
+      "title": 1,
+      "type": 1,
+      "use": 15
+    }
+  },
+  "02-fixed.svg": {
+    "sha256": "479f6eb60c173d7f6c7928d1fa16d7bc5df7b274067260ede4ffc71f725f4434",
+    "root": {
+      "width": "240.944882pt",
+      "height": "155.905512pt",
+      "viewBox": "0 0 240.944882 155.905512",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "clipPath": [
+        "id"
+      ],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "clip-path",
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "clip-path",
+        "d",
+        "id",
+        "style"
+      ],
+      "rect": [
+        "height",
+        "width",
+        "x",
+        "y"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ],
+      "use": [
+        "style",
+        "x",
+        "y",
+        "{http://www.w3.org/1999/xlink}href"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #cc3333; stroke: #cc3333",
+      "fill: #ffffff",
+      "fill: #ffffff; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter",
+      "fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square",
+      "fill: none; stroke: #339944; stroke-width: 0.8; stroke-linecap: square",
+      "fill: none; stroke: #cc3333; stroke-width: 0.8; stroke-linecap: square",
+      "font: 7px 'DejaVu Sans'; text-anchor: middle",
+      "font: 7px 'DejaVu Sans'; text-anchor: start",
+      "font: 8px 'DejaVu Sans'; text-anchor: end",
+      "font: 8px 'DejaVu Sans'; text-anchor: middle",
+      "stroke: #000000; stroke-width: 0.8",
+      "stroke: #cc3333"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "clipPath": 1,
+      "creator": 1,
+      "defs": 5,
+      "format": 1,
+      "g": 66,
+      "metadata": 1,
+      "path": 13,
+      "rect": 1,
+      "style": 1,
+      "svg": 1,
+      "text": 16,
+      "title": 1,
+      "type": 1,
+      "use": 15
+    }
+  },
+  "03-144pt.svg": {
+    "sha256": "1900635179229598f934ebc7e9008570a350605d7f03ec337c021ae55fdec4c1",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "04-rotate.svg": {
+    "sha256": "a01a47e76bb62bfa243cabbdb5bdae7b97ba1fc99c64cf88ea24ece4e07fb38c",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id",
+        "transform"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "05-uniform.svg": {
+    "sha256": "a83b5a57c961c7592d0b5f80a55f0b9ba317227f44fc6bad6220ea573224d5f9",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id",
+        "transform"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "06-nonzero-viewbox.svg": {
+    "sha256": "75f2f47d4fafc0de41236a770b678db1be83e2c9bd02584da0732c93527623a9",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "10 20 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id",
+        "transform"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "07-inheritance.svg": {
+    "sha256": "c1cf73cac82908eb535b3f5dd1156d32439edd5a9cb6b6471fd90827cea84a59",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id",
+        "style"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 8px 'DejaVu Sans'"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "08-units.svg": {
+    "sha256": "6dd9f9c223f2aa1f9b1e80bb8265600368b125f9e92f50cdfa67378c9c9a66e9",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 6pt 'DejaVu Sans'"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "09-equality.svg": {
+    "sha256": "af3dcef2307ab06be0cb5642a0f884a7ddcd35524f55427b5f85181c0bf371ef",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #000000; stroke-width: 0.25",
+      "font: 6px 'DejaVu Sans'"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "10-tspan.svg": {
+    "sha256": "cfea9c5684113ee7456838d03715b3e38e61764280428694c6682d196c1790a0",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "tspan": [
+        "style",
+        "x",
+        "y"
+      ],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 5px 'DejaVu Sans'",
+      "font: 8px 'DejaVu Sans'"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "tspan": 2,
+      "type": 1
+    }
+  },
+  "13-nonuniform.svg": {
+    "sha256": "7010d68cebed475275cee0f9f496b1764b512c9dfe112577e7f7bb9b4ab74064",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id",
+        "transform"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "14-vector-effect.svg": {
+    "sha256": "8602a2f720f68e7f8390b3a569936676e47107a3f315aed4407a30cedff80542",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style",
+        "vector-effect"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "11-outline.svg": {
+    "sha256": "488ecf97dd6e81b7200556556e92e4a3bfd3464df97c9b6790bc4a9bba519612",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id",
+        "transform"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "id",
+        "style",
+        "transform"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ],
+      "use": [
+        "x",
+        "{http://www.w3.org/1999/xlink}href"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 3,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 7,
+      "style": 1,
+      "svg": 1,
+      "title": 1,
+      "type": 1,
+      "use": 6
+    }
+  },
+  "12-mixed.svg": {
+    "sha256": "343e8ceb5c3d2d171fe4c1eff1ba60ead699e9dd7513e7e2a796d64ff65593b7",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id",
+        "transform"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "id",
+        "style",
+        "transform"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ],
+      "use": [
+        "x",
+        "{http://www.w3.org/1999/xlink}href"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 2,
+      "format": 1,
+      "g": 5,
+      "metadata": 1,
+      "path": 4,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1,
+      "use": 3
+    }
+  },
+  "21-measurement.svg": {
+    "sha256": "1f39b7b9278ac957b885f7925d976a688a4a321dd43092d7d7410b30d8c6e3e5",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.125; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.7px 'DejaVu Sans'; text-anchor: start",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "22-measurement.svg": {
+    "sha256": "d77a36d9774c7129fd30b560d5566f223db28150ae82c514c95f53120c7e6cd3",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.15; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.9px 'DejaVu Sans'; text-anchor: middle",
+      "font: 8px 'DejaVu Sans'; text-anchor: middle"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "23-measurement.svg": {
+    "sha256": "0c95024e3f785213467d2b26b101103766f3776bdbe2e8862204a2adb9559ded",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.175; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 5.1px 'DejaVu Sans'; text-anchor: end",
+      "font: 8px 'DejaVu Sans'; text-anchor: end"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "24-measurement.svg": {
+    "sha256": "6f925a0f047710bc06397780c22d88209d9fe3829883882f8b973ae401bfb7e3",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.1; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 5.3px 'DejaVu Sans'; text-anchor: start",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "25-measurement.svg": {
+    "sha256": "de443ff497cc5f19d3ee006ce45dae2a9cc238ae92fe8b6e83c94de59d9c1aa2",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.125; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.5px 'DejaVu Sans'; text-anchor: middle",
+      "font: 8px 'DejaVu Sans'; text-anchor: middle"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "26-measurement.svg": {
+    "sha256": "e4339533c316dfec216593a06e7a2a9a10eedf3ce337d949ccbf01063d6ec705",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.15; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.7px 'DejaVu Sans'; text-anchor: end",
+      "font: 8px 'DejaVu Sans'; text-anchor: end"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "27-measurement.svg": {
+    "sha256": "d7de2aa64a7d1d925053a77cabdf77455c3e345b5a4139d6c01335f470df1d82",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.175; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.9px 'DejaVu Sans'; text-anchor: start",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "28-measurement.svg": {
+    "sha256": "aa09644c637bd783e34564f8f45f4e03e8aed40edd3e656c3e991866a4394718",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.1; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 5.1px 'DejaVu Sans'; text-anchor: middle",
+      "font: 8px 'DejaVu Sans'; text-anchor: middle"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "29-measurement.svg": {
+    "sha256": "5c883770043b150688578fd84fcaa3cbe4a64a1dcd6028c0cb7cb65dad8aad4e",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.125; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 5.3px 'DejaVu Sans'; text-anchor: end",
+      "font: 8px 'DejaVu Sans'; text-anchor: end"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "30-measurement.svg": {
+    "sha256": "feb05400662175f673ef87f3d1785f381cd33be33b1075effbb10c792fb86223",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.15; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.5px 'DejaVu Sans'; text-anchor: start",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "31-measurement.svg": {
+    "sha256": "a9fb43dd76e7d97e35be2d72bf86e63ecb17c59be4379c4ff10e1fe816001ade",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.175; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.7px 'DejaVu Sans'; text-anchor: middle",
+      "font: 8px 'DejaVu Sans'; text-anchor: middle"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "32-measurement.svg": {
+    "sha256": "6a27aa29d181ba2f3207d284eeb31df5a7c9a84f9c401b350ea181bade2ce20b",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.1; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.9px 'DejaVu Sans'; text-anchor: end",
+      "font: 8px 'DejaVu Sans'; text-anchor: end"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "33-measurement.svg": {
+    "sha256": "73a69f89cc96e15f0299ad1804a7d050eaa10ed9168fdf755b60438f5b12a030",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.125; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 5.1px 'DejaVu Sans'; text-anchor: start",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "34-measurement.svg": {
+    "sha256": "332c726914347665c76d496d2baaee494d3db5b610f36bbdc1bf49b137afd4be",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.15; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 5.3px 'DejaVu Sans'; text-anchor: middle",
+      "font: 8px 'DejaVu Sans'; text-anchor: middle"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "35-measurement.svg": {
+    "sha256": "3d1009c966aefae0206ef0539fdc4de45c20c5f4c61fd59fa1cf095aeda3cf2f",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.175; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.5px 'DejaVu Sans'; text-anchor: end",
+      "font: 8px 'DejaVu Sans'; text-anchor: end"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "36-measurement.svg": {
+    "sha256": "3a7dd049e6152cf6315aa624be4a53eb174d15a9809fd35aeadf0fe93a37bb24",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.1; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.7px 'DejaVu Sans'; text-anchor: start",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "37-measurement.svg": {
+    "sha256": "fbdae1bf7b34a79b1a00fd9a4c64768110b764f85bdcd20cbafd0d202adf5afa",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.125; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 4.9px 'DejaVu Sans'; text-anchor: middle",
+      "font: 8px 'DejaVu Sans'; text-anchor: middle"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "38-measurement.svg": {
+    "sha256": "7f0915b2e40a01b3fcb33a9e97cfcc55c80523d3bd89c214b02c80e0406b49be",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.15; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 5.1px 'DejaVu Sans'; text-anchor: end",
+      "font: 8px 'DejaVu Sans'; text-anchor: end"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "39-measurement.svg": {
+    "sha256": "b0b95bf3f9a501dce0d279a74faa01d09c8cb4b978a16591b6f6b566d3721ee6",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.175; stroke-linecap: square",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.8; stroke-linecap: square",
+      "font: 5.3px 'DejaVu Sans'; text-anchor: start",
+      "font: 8px 'DejaVu Sans'; text-anchor: start"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 6,
+      "metadata": 1,
+      "path": 3,
+      "style": 1,
+      "svg": 1,
+      "text": 2,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "15-missing-font.svg": {
+    "sha256": "c41c2d2356529b149d16af1c718742fbb209695cd24c1890eac1aca81bdf62f7",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72",
+      "version": "1.1"
+    },
+    "elements": {
+      "Agent": [],
+      "RDF": [],
+      "Work": [],
+      "creator": [],
+      "defs": [],
+      "format": [],
+      "g": [
+        "id"
+      ],
+      "metadata": [],
+      "path": [
+        "d",
+        "style"
+      ],
+      "style": [
+        "type"
+      ],
+      "svg": [
+        "height",
+        "version",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "style",
+        "transform",
+        "x",
+        "y"
+      ],
+      "title": [],
+      "type": [
+        "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource"
+      ]
+    },
+    "inlineStyles": [
+      "fill: #ffffff",
+      "fill: none; stroke: #1f77b4; stroke-width: 0.5; stroke-linecap: square",
+      "font: 8px 'FigurePreflight Missing Font'"
+    ],
+    "stylesheets": [
+      "*{stroke-linejoin: round; stroke-linecap: butt}"
+    ],
+    "prolog": "",
+    "counts": {
+      "Agent": 1,
+      "RDF": 1,
+      "Work": 1,
+      "creator": 1,
+      "defs": 1,
+      "format": 1,
+      "g": 4,
+      "metadata": 1,
+      "path": 2,
+      "style": 1,
+      "svg": 1,
+      "text": 1,
+      "title": 1,
+      "type": 1
+    }
+  },
+  "16-clip-use.svg": {
+    "sha256": "7125ac0859a6086f15e231ae7e3d91ac9eb84e8780f52c6dc668fb8b07a19edb",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72"
+    },
+    "elements": {
+      "clipPath": [
+        "id"
+      ],
+      "defs": [],
+      "g": [
+        "clip-path"
+      ],
+      "rect": [
+        "fill",
+        "height",
+        "id",
+        "stroke",
+        "stroke-width",
+        "width",
+        "x",
+        "y"
+      ],
+      "svg": [
+        "height",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "font-family",
+        "font-size",
+        "x",
+        "y"
+      ],
+      "use": [
+        "href",
+        "x",
+        "y"
+      ]
+    },
+    "inlineStyles": [],
+    "stylesheets": [],
+    "prolog": "",
+    "counts": {
+      "clipPath": 1,
+      "defs": 1,
+      "g": 1,
+      "rect": 2,
+      "svg": 1,
+      "text": 1,
+      "use": 2
+    }
+  },
+  "17-alpha-color-patches.svg": {
+    "sha256": "91d11fd3424d1b29611322712d0ff14570a1de13c811e4b6ff467cd742e0561e",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72"
+    },
+    "elements": {
+      "rect": [
+        "fill",
+        "fill-opacity",
+        "height",
+        "opacity",
+        "width",
+        "x"
+      ],
+      "svg": [
+        "height",
+        "viewBox",
+        "width"
+      ]
+    },
+    "inlineStyles": [],
+    "stylesheets": [],
+    "prolog": "",
+    "counts": {
+      "rect": 3,
+      "svg": 1
+    }
+  },
+  "18-security-mutation.svg": {
+    "sha256": "fa64458b9a76e95f14c4d260c40b7c8737f6e2615e3407181fc59bdd450fec22",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72"
+    },
+    "elements": {
+      "script": [],
+      "svg": [
+        "height",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "font-size",
+        "x",
+        "y"
+      ]
+    },
+    "inlineStyles": [],
+    "stylesheets": [],
+    "prolog": "",
+    "counts": {
+      "script": 1,
+      "svg": 1,
+      "text": 1
+    }
+  },
+  "19-limit-boundaries.svg": {
+    "sha256": "6f0c761ca4b598cd90aef86cb0f9d4583fe8707dd1a1b7755bb012837235387b",
+    "root": {
+      "width": "144pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72"
+    },
+    "elements": {
+      "g": [],
+      "svg": [
+        "height",
+        "viewBox",
+        "width"
+      ]
+    },
+    "inlineStyles": [],
+    "stylesheets": [],
+    "prolog": "",
+    "counts": {
+      "g": 4096,
+      "svg": 1
+    }
+  },
+  "20-parse-invalid.svg": {
+    "sha256": "1f8716b7e166496304bdc952ad7e2215701f3d1fb554fe2e4d1b9ef17f365328",
+    "root": {
+      "width": "0pt",
+      "height": "72pt",
+      "viewBox": "0 0 144 72"
+    },
+    "elements": {
+      "svg": [
+        "height",
+        "viewBox",
+        "width"
+      ],
+      "text": [
+        "font-size",
+        "x",
+        "y"
+      ]
+    },
+    "inlineStyles": [],
+    "stylesheets": [],
+    "prolog": "",
+    "counts": {
+      "svg": 1,
+      "text": 1
+    }
+  }
+}

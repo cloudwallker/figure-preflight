@@ -1,0 +1,51 @@
+import {test,expect} from '@playwright/test';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {pressureCases} from './performance-cases.ts';
+
+for(const kind of ['accepted','oversized'])test(`native chooser repeats the same ${kind} disk file three times`,async({page})=>{
+ mkdirSync('.cache/repeat-file',{recursive:true});const file=kind==='accepted'?'fixtures/02-fixed.svg':'.cache/repeat-file/oversized.svg';if(kind==='oversized')writeFileSync(file,Buffer.alloc(2097153,32));
+ await page.goto('/app');await expect(page.locator('#input-status')).toContainText('准备就绪');await page.evaluate(()=>{const w=window as any;w.importEvents=[];w.fileReads=0;document.querySelector('#file')!.addEventListener('change',e=>{const f=(e.target as HTMLInputElement).files?.[0];w.importEvents.push({trusted:e.isTrusted,name:f?.name,size:f?.size,lastModified:f?.lastModified});},true);const read=File.prototype.arrayBuffer;File.prototype.arrayBuffer=function(){w.fileReads++;return read.call(this);};});
+ for(let run=0;run<3;run++){if(kind==='oversized')await page.locator('#width').fill('50.8');const chooser=page.waitForEvent('filechooser');await page.locator('#file').click();await(await chooser).setFiles(file);await expect.poll(()=>page.evaluate(()=>(window as any).importEvents.length)).toBe(run+1);if(kind==='accepted'){await expect(page.locator('#results')).toHaveAttribute('data-revision',String(run+1));await expect(page.locator('#save-html')).toBeEnabled();}else{await expect(page.locator('#input-status')).toContainText('输入 limited');await expect(page.locator('#save-json')).toBeDisabled();}}
+ const result=await page.evaluate(()=>({events:(window as any).importEvents,reads:(window as any).fileReads}));expect(result.events.every((e:any)=>e.trusted)).toBe(true);expect(new Set(result.events.map((e:any)=>e.name+':'+e.size+':'+e.lastModified)).size).toBe(1);expect(result.reads).toBe(kind==='accepted'?3:0);
+});
+
+test('native chooser reimports the same actual disk file after cancellation',async({page})=>{
+ mkdirSync('.cache/repeat-file',{recursive:true});const sample=pressureCases().find(c=>c.name==='cancel-and-reimport-budgeted')!,file='.cache/repeat-file/cancel.svg';writeFileSync(file,sample.xml);await page.goto('/app');await expect(page.locator('#input-status')).toContainText('准备就绪');await page.locator('#width').fill(String(sample.widthMm));
+ const choose=async()=>{const chooser=page.waitForEvent('filechooser');await page.locator('#file').click();await(await chooser).setFiles(file);};await choose();await expect(page.locator('#cancel')).toBeEnabled();await page.locator('#cancel').click({force:true});await expect(page.locator('#run-state')).toContainText(/部分结果|cancelled/);const revision=await page.locator('#results').getAttribute('data-revision');await choose();await expect(page.locator('#results')).not.toHaveAttribute('data-revision',revision!);await expect(page.locator('#run-state')).toContainText('检查完成');await expect(page.locator('#save-html')).toBeEnabled();
+});
+test('real app imports bad, selects legend, reuses threshold measurement and replaces width revision',async({page})=>{
+ await page.goto('/app');
+ await page.locator('#file').setInputFiles('fixtures/01-bad.svg');
+ await expect(page.locator('#input-status')).toContainText('检查完成',{timeout:5000});
+ await expect(page.locator('[data-finding]')).toHaveCount(4);
+ await expect(page.locator('.preview-panel svg[role="group"]')).toHaveCount(4);
+ const revision=await page.locator('#results').getAttribute('data-revision');
+ await page.locator('#font-threshold').fill('5.6');await expect(page.locator('[data-finding]')).toHaveCount(3);
+ expect(await page.locator('#results').getAttribute('data-revision')).toBe(revision);
+ await page.locator('#width').fill('170');await expect(page.locator('[data-finding]')).toHaveCount(0);
+ expect(await page.locator('#results').getAttribute('data-revision')).not.toBe(revision);
+ await page.locator('#width').fill('85');await page.locator('#font-threshold').fill('6');await page.locator('#file').setInputFiles('fixtures/02-fixed.svg');await expect(page.locator('#source-label')).toHaveText('02-fixed.svg');await expect(page.locator('[data-finding]')).toHaveCount(0);
+});
+test('390px drag drop supports visible keyboard controls and Enter Space selection',async({page,browserName})=>{
+ await page.setViewportSize({width:390,height:844});await page.goto('/app');
+ const xml=readFileSync('fixtures/01-bad.svg','utf8');const transfer=await page.evaluateHandle(xml=>{const data=new DataTransfer();data.items.add(new File([xml],'dragged.svg',{type:'image/svg+xml'}));return data;},xml);await page.locator('#drop-zone').dispatchEvent('drop',{dataTransfer:transfer});await expect(page.locator('[data-finding]')).toHaveCount(4);
+ await expect(page.locator('#save-html')).toBeEnabled();await page.locator('#file').focus();const visited:string[]=[];for(let i=0;i<15;i++){await page.keyboard.press('Tab');visited.push(await page.evaluate(()=>document.activeElement?.id||document.activeElement?.getAttribute('data-finding')||''));if(visited.at(-1)?.includes('SMALL_TEXT'))break;}
+ for(const id of ['example','width','font-threshold','stroke-threshold','save-html','save-json'])expect(visited).toContain(id);
+ await page.keyboard.press('Enter');await expect(page.locator('#results')).toHaveAttribute('data-selected',/o\d+/);await page.keyboard.press('Space');expect(await page.locator('[data-selection]').count()).toBeGreaterThanOrEqual(4);
+ const focus=await page.evaluate(()=>{const e=document.activeElement as HTMLElement,r=e.getBoundingClientRect(),s=getComputedStyle(e);return {outline:s.outlineStyle,width:innerWidth,rect:{x:r.x,right:r.right,top:r.top,bottom:r.bottom},height:innerHeight,scrollWidth:document.documentElement.scrollWidth};});expect(focus.outline).not.toBe('none');expect(focus.rect.x).toBeGreaterThanOrEqual(0);expect(focus.rect.right).toBeLessThanOrEqual(390);expect(focus.rect.top).toBeGreaterThanOrEqual(0);expect(focus.rect.bottom).toBeLessThanOrEqual(focus.height);expect(focus.scrollWidth).toBe(390);
+ await page.locator('#review-note').scrollIntoViewIfNeeded();await expect(page.locator('#review-note')).toBeInViewport();await page.locator('#review-note').fill('390px 键盘复核');
+});
+test('changing thresholds during a pending width debounce still computes the newest width',async({page})=>{
+ await page.goto('/app');await page.locator('#file').setInputFiles('fixtures/01-bad.svg');await expect(page.locator('[data-finding]')).toHaveCount(4);
+ await page.locator('#width').fill('170');await page.locator('#font-threshold').fill('5.9');await expect(page.locator('#input-status')).toContainText('检查完成',{timeout:5000});await expect(page.locator('#results')).toContainText('170.00');
+});
+import {mkdirSync} from 'node:fs';
+import {resolve} from 'node:path';
+const legendReference=JSON.parse(readFileSync('fixtures/text-reference.json','utf8')).files['01-bad.svg'].cases[0];
+test('real File import selects the true legend at an independent anchor and writes the demo screenshot',async({page,browserName})=>{
+ await page.goto('/app');await page.locator('#file').setInputFiles('examples/bad.svg');await expect(page.locator('#save-html')).toBeEnabled();const originalXml=readFileSync('examples/bad.svg','utf8'),stableId=await page.evaluate(xml=>{const doc=new DOMParser().parseFromString(xml,'image/svg+xml');return 'o'+[...doc.querySelectorAll('*')].indexOf(doc.querySelector('[id=small-legend] text')!);},originalXml);const ref=legendReference.records.find((r:any)=>r.gid==='small-legend'),root=page.locator('.preview-panel svg[role="group"]').first();await root.scrollIntoViewIfNeeded();const box=await root.boundingBox();await page.mouse.click(box!.x+ref.clickPx[0]*box!.width/legendReference.widthPx,box!.y+ref.clickPx[1]*box!.height/legendReference.heightPx);await expect(page.locator('#results')).toHaveAttribute('data-selected',stableId);await expect(page.locator('[data-selection]')).toHaveCount(4);await expect(page.locator('#selection-detail')).toContainText('5.750 pt');const dir=resolve(process.env.FIGURE_DELIVERY_EVIDENCE??'.cache/delivery',browserName);mkdirSync(dir,{recursive:true});await page.locator('#results').screenshot({path:resolve(dir,'demo.png')});await page.locator('#review-status').selectOption('needs-change');await page.locator('#review-note').fill('桌面默认缩放；灰度中红绿系列亮度接近，建议增加线型区分并加粗细线。');for(const format of ['json','html']){const waiting=page.waitForEvent('download');await page.locator('#save-'+format).click();await(await waiting).saveAs(resolve(dir,'example-bad-85mm.'+format));}await page.setViewportSize({width:390,height:844});await page.locator('#results').screenshot({path:resolve(dir,'mobile-report.png')});
+});
+test('same text object retains both roles and unknown bounds never produce a precise highlight',async({page})=>{
+ await page.goto('/app');await page.locator('#width').fill('50.8');const xml='<svg xmlns="http://www.w3.org/2000/svg" width="144pt" height="72pt" viewBox="0 0 144 72"><text x="10" y="20" font-family="DejaVu Sans" font-size="5px" stroke="black" stroke-width=".1">HIM</text></svg>';await page.locator('#file').setInputFiles({name:'dual.svg',mimeType:'image/svg+xml',buffer:Buffer.from(xml)});await expect(page.locator('#save-html')).toBeEnabled();await expect(page.locator('[data-finding]')).toHaveCount(2);const ids=await page.locator('[data-finding]').evaluateAll(es=>es.map(e=>e.getAttribute('data-object-id')));expect(ids[0]).toBe(ids[1]);await page.locator('[data-finding]').first().click();await expect(page.locator('#selection-detail')).toContainText('文字 · measured');await expect(page.locator('#selection-detail')).toContainText('描边 · measured');await expect(page.locator('[data-selection]')).toHaveCount(8);
+ await page.locator('#file').setInputFiles({name:'unknown.svg',mimeType:'image/svg+xml',buffer:Buffer.from(xml.replace('<text ','<text transform="scale(2 1)" '))});await expect(page.locator('#save-html')).toBeEnabled();await expect(page.locator('[data-finding]')).toHaveCount(0);await page.locator('.preview-panel text[role=button]').first().focus();await page.keyboard.press('Enter');await expect(page.locator('#selection-detail')).toContainText('无法定位');await expect(page.locator('[data-selection]')).toHaveCount(0);await expect(page.locator('#coverage')).toContainText('未检测');
+});

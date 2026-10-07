@@ -1,0 +1,296 @@
+{
+  "profile": {
+    "matplotlib": "3.9.4",
+    "fonttype": "none",
+    "usetex": false,
+    "family": "DejaVu Sans",
+    "style": "normal",
+    "weight": "normal",
+    "hashsalt": "figure-preflight-fixtures-v1",
+    "date": null
+  },
+  "profileId": "matplotlib-text-svg-v1",
+  "generatorSha256": "384661b08957a30152a130d986bc3e57e1a82eb1d2a91d0b6513939a3ae75360",
+  "files": {
+    "01-bad.svg": {
+      "sha256": "d00773ebe46027fd13419369e37b0cf898e4623b855666f6f7804acc01e3eafa",
+      "widthMm": 85,
+      "textPt": {
+        "small-label-a": 5,
+        "small-label-b": 5.5,
+        "small-legend": 5.75
+      },
+      "strokePt": {
+        "thin-line": 0.15
+      },
+      "ordinaryTextMinPt": 7,
+      "labelText": "HIM",
+      "legendSource": "Axes.legend"
+    },
+    "02-fixed.svg": {
+      "sha256": "479f6eb60c173d7f6c7928d1fa16d7bc5df7b274067260ede4ffc71f725f4434",
+      "widthMm": 85,
+      "textPt": {
+        "small-label-a": 7,
+        "small-label-b": 7,
+        "small-legend": 7
+      },
+      "strokePt": {
+        "thin-line": 0.8
+      }
+    },
+    "03-144pt.svg": {
+      "sha256": "1900635179229598f934ebc7e9008570a350605d7f03ec337c021ae55fdec4c1",
+      "at50_8mm": {
+        "fontPt": 8,
+        "strokePt": 0.5
+      },
+      "at25_4mm": {
+        "fontPt": 4,
+        "strokePt": 0.25
+      },
+      "basis": "2 inch figure equals 144 pt; independent 72 pt per inch"
+    },
+    "04-rotate.svg": {
+      "sha256": "a01a47e76bb62bfa243cabbdb5bdae7b97ba1fc99c64cf88ea24ece4e07fb38c"
+    },
+    "05-uniform.svg": {
+      "sha256": "a83b5a57c961c7592d0b5f80a55f0b9ba317227f44fc6bad6220ea573224d5f9"
+    },
+    "06-nonzero-viewbox.svg": {
+      "sha256": "75f2f47d4fafc0de41236a770b678db1be83e2c9bd02584da0732c93527623a9"
+    },
+    "07-inheritance.svg": {
+      "sha256": "c1cf73cac82908eb535b3f5dd1156d32439edd5a9cb6b6471fd90827cea84a59"
+    },
+    "08-units.svg": {
+      "sha256": "6dd9f9c223f2aa1f9b1e80bb8265600368b125f9e92f50cdfa67378c9c9a66e9"
+    },
+    "09-equality.svg": {
+      "sha256": "af3dcef2307ab06be0cb5642a0f884a7ddcd35524f55427b5f85181c0bf371ef"
+    },
+    "10-tspan.svg": {
+      "sha256": "cfea9c5684113ee7456838d03715b3e38e61764280428694c6682d196c1790a0"
+    },
+    "13-nonuniform.svg": {
+      "sha256": "7010d68cebed475275cee0f9f496b1764b512c9dfe112577e7f7bb9b4ab74064"
+    },
+    "14-vector-effect.svg": {
+      "sha256": "8602a2f720f68e7f8390b3a569936676e47107a3f315aed4407a30cedff80542"
+    },
+    "11-outline.svg": {
+      "sha256": "488ecf97dd6e81b7200556556e92e4a3bfd3464df97c9b6790bc4a9bba519612"
+    },
+    "12-mixed.svg": {
+      "sha256": "343e8ceb5c3d2d171fe4c1eff1ba60ead699e9dd7513e7e2a796d64ff65593b7"
+    },
+    "21-measurement.svg": {
+      "sha256": "1f39b7b9278ac957b885f7925d976a688a4a321dd43092d7d7410b30d8c6e3e5",
+      "widthMm": 50.8,
+      "smallPt": 4.7,
+      "thinPt": 0.125,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "left",
+      "generatorIndex": 21
+    },
+    "22-measurement.svg": {
+      "sha256": "d77a36d9774c7129fd30b560d5566f223db28150ae82c514c95f53120c7e6cd3",
+      "widthMm": 50.8,
+      "smallPt": 4.9,
+      "thinPt": 0.15000000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "center",
+      "generatorIndex": 22
+    },
+    "23-measurement.svg": {
+      "sha256": "0c95024e3f785213467d2b26b101103766f3776bdbe2e8862204a2adb9559ded",
+      "widthMm": 50.8,
+      "smallPt": 5.1,
+      "thinPt": 0.17500000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "right",
+      "generatorIndex": 23
+    },
+    "24-measurement.svg": {
+      "sha256": "6f925a0f047710bc06397780c22d88209d9fe3829883882f8b973ae401bfb7e3",
+      "widthMm": 50.8,
+      "smallPt": 5.3,
+      "thinPt": 0.1,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "left",
+      "generatorIndex": 24
+    },
+    "25-measurement.svg": {
+      "sha256": "de443ff497cc5f19d3ee006ce45dae2a9cc238ae92fe8b6e83c94de59d9c1aa2",
+      "widthMm": 50.8,
+      "smallPt": 4.5,
+      "thinPt": 0.125,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "center",
+      "generatorIndex": 25
+    },
+    "26-measurement.svg": {
+      "sha256": "e4339533c316dfec216593a06e7a2a9a10eedf3ce337d949ccbf01063d6ec705",
+      "widthMm": 50.8,
+      "smallPt": 4.7,
+      "thinPt": 0.15000000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "right",
+      "generatorIndex": 26
+    },
+    "27-measurement.svg": {
+      "sha256": "d7de2aa64a7d1d925053a77cabdf77455c3e345b5a4139d6c01335f470df1d82",
+      "widthMm": 50.8,
+      "smallPt": 4.9,
+      "thinPt": 0.17500000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "left",
+      "generatorIndex": 27
+    },
+    "28-measurement.svg": {
+      "sha256": "aa09644c637bd783e34564f8f45f4e03e8aed40edd3e656c3e991866a4394718",
+      "widthMm": 50.8,
+      "smallPt": 5.1,
+      "thinPt": 0.1,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "center",
+      "generatorIndex": 28
+    },
+    "29-measurement.svg": {
+      "sha256": "5c883770043b150688578fd84fcaa3cbe4a64a1dcd6028c0cb7cb65dad8aad4e",
+      "widthMm": 50.8,
+      "smallPt": 5.3,
+      "thinPt": 0.125,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "right",
+      "generatorIndex": 29
+    },
+    "30-measurement.svg": {
+      "sha256": "feb05400662175f673ef87f3d1785f381cd33be33b1075effbb10c792fb86223",
+      "widthMm": 50.8,
+      "smallPt": 4.5,
+      "thinPt": 0.15000000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "left",
+      "generatorIndex": 30
+    },
+    "31-measurement.svg": {
+      "sha256": "a9fb43dd76e7d97e35be2d72bf86e63ecb17c59be4379c4ff10e1fe816001ade",
+      "widthMm": 50.8,
+      "smallPt": 4.7,
+      "thinPt": 0.17500000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "center",
+      "generatorIndex": 31
+    },
+    "32-measurement.svg": {
+      "sha256": "6a27aa29d181ba2f3207d284eeb31df5a7c9a84f9c401b350ea181bade2ce20b",
+      "widthMm": 50.8,
+      "smallPt": 4.9,
+      "thinPt": 0.1,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "right",
+      "generatorIndex": 32
+    },
+    "33-measurement.svg": {
+      "sha256": "73a69f89cc96e15f0299ad1804a7d050eaa10ed9168fdf755b60438f5b12a030",
+      "widthMm": 50.8,
+      "smallPt": 5.1,
+      "thinPt": 0.125,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "left",
+      "generatorIndex": 33
+    },
+    "34-measurement.svg": {
+      "sha256": "332c726914347665c76d496d2baaee494d3db5b610f36bbdc1bf49b137afd4be",
+      "widthMm": 50.8,
+      "smallPt": 5.3,
+      "thinPt": 0.15000000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "center",
+      "generatorIndex": 34
+    },
+    "35-measurement.svg": {
+      "sha256": "3d1009c966aefae0206ef0539fdc4de45c20c5f4c61fd59fa1cf095aeda3cf2f",
+      "widthMm": 50.8,
+      "smallPt": 4.5,
+      "thinPt": 0.17500000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "right",
+      "generatorIndex": 35
+    },
+    "36-measurement.svg": {
+      "sha256": "3a7dd049e6152cf6315aa624be4a53eb174d15a9809fd35aeadf0fe93a37bb24",
+      "widthMm": 50.8,
+      "smallPt": 4.7,
+      "thinPt": 0.1,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "left",
+      "generatorIndex": 36
+    },
+    "37-measurement.svg": {
+      "sha256": "fbdae1bf7b34a79b1a00fd9a4c64768110b764f85bdcd20cbafd0d202adf5afa",
+      "widthMm": 50.8,
+      "smallPt": 4.9,
+      "thinPt": 0.125,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "center",
+      "generatorIndex": 37
+    },
+    "38-measurement.svg": {
+      "sha256": "7f0915b2e40a01b3fcb33a9e97cfcc55c80523d3bd89c214b02c80e0406b49be",
+      "widthMm": 50.8,
+      "smallPt": 5.1,
+      "thinPt": 0.15000000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "right",
+      "generatorIndex": 38
+    },
+    "39-measurement.svg": {
+      "sha256": "b0b95bf3f9a501dce0d279a74faa01d09c8cb4b978a16591b6f6b566d3721ee6",
+      "widthMm": 50.8,
+      "smallPt": 5.3,
+      "thinPt": 0.17500000000000002,
+      "ordinaryTextPt": 8,
+      "ordinaryStrokePt": 0.8,
+      "anchor": "left",
+      "generatorIndex": 39
+    },
+    "15-missing-font.svg": {
+      "sha256": "c41c2d2356529b149d16af1c718742fbb209695cd24c1890eac1aca81bdf62f7"
+    },
+    "16-clip-use.svg": {
+      "sha256": "7125ac0859a6086f15e231ae7e3d91ac9eb84e8780f52c6dc668fb8b07a19edb"
+    },
+    "17-alpha-color-patches.svg": {
+      "sha256": "91d11fd3424d1b29611322712d0ff14570a1de13c811e4b6ff467cd742e0561e"
+    },
+    "18-security-mutation.svg": {
+      "sha256": "fa64458b9a76e95f14c4d260c40b7c8737f6e2615e3407181fc59bdd450fec22"
+    },
+    "19-limit-boundaries.svg": {
+      "sha256": "6f0c761ca4b598cd90aef86cb0f9d4583fe8707dd1a1b7755bb012837235387b"
+    },
+    "20-parse-invalid.svg": {
+      "sha256": "1f8716b7e166496304bdc952ad7e2215701f3d1fb554fe2e4d1b9ef17f365328"
+    }
+  }
+}

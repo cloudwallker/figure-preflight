@@ -1,0 +1,1357 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-07T08:42:07.177Z",
+  "source": {
+    "label": "bad.svg",
+    "inputSha256": "40bdee0dc11c708e40d2d8ba4755dfcbdcc6980faaa6ffeb0c466dbc016db8b2",
+    "profileId": "matplotlib-text-svg-v1",
+    "elementCount": 119
+  },
+  "preview": {
+    "status": "enabled",
+    "reasonCodes": []
+  },
+  "measurement": {
+    "revision": 1,
+    "profileId": "matplotlib-text-svg-v1",
+    "run": {
+      "status": "complete",
+      "stopReason": null
+    },
+    "finalSize": {
+      "widthMm": 85,
+      "heightMm": 55.00000004150326,
+      "widthPx": 321.25984251968504,
+      "heightPx": 207.87401590489424
+    },
+    "environment": {
+      "toolVersion": "0.1.0",
+      "browserName": "Chromium",
+      "browserVersion": "145.0.7632.6",
+      "platform": "Win32",
+      "devicePixelRatio": 1,
+      "font": {
+        "status": "loaded",
+        "family": "DejaVu Sans",
+        "version": "2.35",
+        "sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+        "licenseRef": "assets/LICENSE_DEJAVU",
+        "reasonCodes": []
+      }
+    },
+    "objects": [
+      {
+        "objectId": "o5",
+        "sourceId": null,
+        "sourcePath": "/0/1/0/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o8",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/0/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o13",
+        "sourceId": "maadcc12f33",
+        "sourcePath": "/0/1/1/1/0/0/0/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "DEFINITION_ONLY"
+        ]
+      },
+      {
+        "objectId": "o15",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/0/0/1/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o17",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/0/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o17",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/0/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.13384001220862754,
+          "y": 0.9257794663738482,
+          "width": 0.05345182802833994,
+          "height": 0.0625422890704602
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o21",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/1/0/0/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o23",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/1/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o23",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/1/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.30997639261661875,
+          "y": 0.9257794663738482,
+          "width": 0.05345182802833994,
+          "height": 0.0625422890704602
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o27",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/2/0/0/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o29",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/2/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o29",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/2/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.48611275719236957,
+          "y": 0.9257794663738482,
+          "width": 0.05345182802833994,
+          "height": 0.0625422890704602
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o33",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/3/0/0/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o35",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/3/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o35",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/3/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.6622491217681206,
+          "y": 0.9257794663738482,
+          "width": 0.05345182802833994,
+          "height": 0.0625422890704602
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o39",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/4/0/0/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o41",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/4/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o41",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/4/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.8383854546793907,
+          "y": 0.9257794663738482,
+          "width": 0.053451828028340025,
+          "height": 0.0625422890704602
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o43",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/5/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o43",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/1/5/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.4687725910211198,
+          "y": 1.0010974748595343,
+          "width": 0.08434188246763939,
+          "height": 0.06254228907046046
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o48",
+        "sourceId": "mef4653c00b",
+        "sourcePath": "/0/1/1/2/0/0/0/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "DEFINITION_ONLY"
+        ]
+      },
+      {
+        "objectId": "o50",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/0/0/1/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o52",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/0/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o52",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/0/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.04317322891105123,
+          "y": 0.8613855424708802,
+          "width": 0.053451828028339914,
+          "height": 0.06254228907046046
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o56",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/1/0/0/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o58",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/1/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o58",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/1/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.04317322891105123,
+          "y": 0.7073855659310534,
+          "width": 0.053451828028339914,
+          "height": 0.0625422890704602
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o62",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/2/0/0/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o64",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/2/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o64",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/2/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.04317322891105123,
+          "y": 0.5533854915191958,
+          "width": 0.05277447729251797,
+          "height": 0.06254232577247187
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o68",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/3/0/0/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o70",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/3/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o70",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/3/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.04317322891105123,
+          "y": 0.39938553944737665,
+          "width": 0.053451828028339914,
+          "height": 0.06254228907046039
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o74",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/4/0/0/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o76",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/4/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o76",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/4/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.04317322891105123,
+          "y": 0.24538551397153452,
+          "width": 0.053451828028339914,
+          "height": 0.06254228907046036
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o80",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/5/0/0/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o82",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/5/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o82",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/5/1/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": 0.04317322891105123,
+          "y": 0.09138552519770388,
+          "width": 0.053451828028339914,
+          "height": 0.06254228907046036
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o84",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/6/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o84",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/2/6/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 8,
+        "matrix": {
+          "a": 0,
+          "b": -1.3333333327233114,
+          "c": 1.3333333327233114,
+          "d": 0,
+          "e": -98.66723246828586,
+          "f": 111.28552622471982
+        },
+        "finalPt": 7.999999996339869,
+        "finalMm": 2.822222220931009,
+        "bounds": {
+          "x": -0.011490869797329915,
+          "y": 0.4345647569889406,
+          "width": 0.0404685400173062,
+          "height": 0.14568142892537966
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o86",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/3/0",
+        "kind": "stroke",
+        "status": "measured",
+        "localValue": 0.15,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 0.14999999993137253,
+        "finalMm": 0.052916666642456416,
+        "bounds": {
+          "x": 0.16022727460324696,
+          "y": 0.27399999257793645,
+          "width": 0.7045454583030035,
+          "height": 0.46200002749151126
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o88",
+        "sourceId": "m6040268d92",
+        "sourcePath": "/0/1/1/3/1/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "DEFINITION_ONLY"
+        ]
+      },
+      {
+        "objectId": "o90",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/3/2/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o91",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/3/2/1",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o92",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/3/2/2",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o94",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/4/0",
+        "kind": "stroke",
+        "status": "measured",
+        "localValue": 0.8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 0.7999999996339869,
+        "finalMm": 0.28222222209310094,
+        "bounds": {
+          "x": 0.16022727460324696,
+          "y": 0.27399999257793645,
+          "width": 0.7045454583030035,
+          "height": 0.308000002015669
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o96",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/5/0",
+        "kind": "stroke",
+        "status": "measured",
+        "localValue": 0.8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 0.7999999996339869,
+        "finalMm": 0.28222222209310094,
+        "bounds": {
+          "x": 0.12500000168809677,
+          "y": 0.11999999157010197,
+          "width": 0,
+          "height": 0.7699999805711649
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o98",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/6/0",
+        "kind": "stroke",
+        "status": "measured",
+        "localValue": 0.8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 0.7999999996339869,
+        "finalMm": 0.28222222209310094,
+        "bounds": {
+          "x": 0.8999999741569201,
+          "y": 0.11999999157010197,
+          "width": 0,
+          "height": 0.7699999805711649
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o100",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/7/0",
+        "kind": "stroke",
+        "status": "measured",
+        "localValue": 0.8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 0.7999999996339869,
+        "finalMm": 0.28222222209310094,
+        "bounds": {
+          "x": 0.12500000168809677,
+          "y": 0.8899999966092744,
+          "width": 0.7750000041333039,
+          "height": 0
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o102",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/8/0",
+        "kind": "stroke",
+        "status": "measured",
+        "localValue": 0.8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 0.7999999996339869,
+        "finalMm": 0.28222222209310094,
+        "bounds": {
+          "x": 0.12500000168809677,
+          "y": 0.11999999157010197,
+          "width": 0.7750000041333039,
+          "height": 0
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o104",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/9/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o104",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/9/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 5,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 4.999999997712418,
+        "finalMm": 1.7638888880818806,
+        "bounds": {
+          "x": 0.2659090933486975,
+          "y": 0.6686343098251877,
+          "width": 0.040381898082383814,
+          "height": 0.03848756132855215
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o106",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/10/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o106",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/10/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 5.5,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 5.49999999748366,
+        "finalMm": 1.9402777768900688,
+        "bounds": {
+          "x": 0.6668456010946469,
+          "y": 0.740823398424234,
+          "width": 0.0435815028072251,
+          "height": 0.04329850687693359
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o109",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/11/0/0",
+        "kind": "stroke",
+        "status": "measured",
+        "localValue": 1,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 0.9999999995424836,
+        "finalMm": 0.35277777761637613,
+        "bounds": {
+          "x": 0.13693219122512126,
+          "y": 0.13844064811340623,
+          "width": 0.13148900368851718,
+          "height": 0.06519925167388181
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o111",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/11/1/0",
+        "kind": "stroke",
+        "status": "measured",
+        "localValue": 0.8,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 0.7999999996339869,
+        "finalMm": 0.28222222209310094,
+        "bounds": {
+          "x": 0.14647793968829279,
+          "y": 0.16830875732751194,
+          "width": 0.047728758148097954,
+          "height": 0
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o113",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/11/1/1/0",
+        "kind": "stroke",
+        "status": "unassessed",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "USE_INSTANCE_STROKE"
+        ]
+      },
+      {
+        "objectId": "o115",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/11/2/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "NOT_RENDERED"
+        ]
+      },
+      {
+        "objectId": "o115",
+        "sourceId": null,
+        "sourcePath": "/0/1/1/11/2/0",
+        "kind": "text",
+        "status": "measured",
+        "localValue": 5.75,
+        "matrix": {
+          "a": 1.3333333327233114,
+          "b": 0,
+          "c": 0,
+          "d": 1.3333333327233114,
+          "e": 0,
+          "f": 1.4210854715202004e-14
+        },
+        "finalPt": 5.74999999736928,
+        "finalMm": 2.028472221294163,
+        "bounds": {
+          "x": 0.21329817893049352,
+          "y": 0.1475405937872521,
+          "width": 0.04675374942086576,
+          "height": 0.04329850687693383
+        },
+        "locationAccuracy": "exact-environment",
+        "reasonCodes": []
+      },
+      {
+        "objectId": "o118",
+        "sourceId": null,
+        "sourcePath": "/0/2/0/0",
+        "kind": "stroke",
+        "status": "excluded",
+        "localValue": null,
+        "matrix": null,
+        "finalPt": null,
+        "finalMm": null,
+        "bounds": null,
+        "locationAccuracy": "unavailable",
+        "reasonCodes": [
+          "DEFINITION_ONLY"
+        ]
+      }
+    ],
+    "coverage": {
+      "enumerationComplete": true,
+      "text": {
+        "discovered": 16,
+        "measured": 16,
+        "unassessed": 0,
+        "excluded": 0,
+        "pending": 0
+      },
+      "stroke": {
+        "discovered": 45,
+        "measured": 8,
+        "unassessed": 15,
+        "excluded": 22,
+        "pending": 0
+      },
+      "textCompleteness": "retained-text-only",
+      "possibleOutline": true,
+      "reasonCodes": [
+        "OUTLINED_TEXT_UNKNOWN"
+      ]
+    },
+    "diagnostics": [],
+    "elapsedMs": 10.099999997764826
+  },
+  "thresholds": {
+    "minFontPt": 6,
+    "minStrokePt": 0.25
+  },
+  "findings": [
+    {
+      "id": "o86:THIN_STROKE",
+      "objectId": "o86",
+      "ruleId": "THIN_STROKE",
+      "actualPt": 0.14999999993137253,
+      "thresholdPt": 0.25,
+      "bounds": {
+        "x": 0.16022727460324696,
+        "y": 0.27399999257793645,
+        "width": 0.7045454583030035,
+        "height": 0.46200002749151126
+      },
+      "reason": "Supported nominal stroke is below the final-size stroke threshold."
+    },
+    {
+      "id": "o104:SMALL_TEXT",
+      "objectId": "o104",
+      "ruleId": "SMALL_TEXT",
+      "actualPt": 4.999999997712418,
+      "thresholdPt": 6,
+      "bounds": {
+        "x": 0.2659090933486975,
+        "y": 0.6686343098251877,
+        "width": 0.040381898082383814,
+        "height": 0.03848756132855215
+      },
+      "reason": "Supported retained text is below the final-size font threshold."
+    },
+    {
+      "id": "o106:SMALL_TEXT",
+      "objectId": "o106",
+      "ruleId": "SMALL_TEXT",
+      "actualPt": 5.49999999748366,
+      "thresholdPt": 6,
+      "bounds": {
+        "x": 0.6668456010946469,
+        "y": 0.740823398424234,
+        "width": 0.0435815028072251,
+        "height": 0.04329850687693359
+      },
+      "reason": "Supported retained text is below the final-size font threshold."
+    },
+    {
+      "id": "o115:SMALL_TEXT",
+      "objectId": "o115",
+      "ruleId": "SMALL_TEXT",
+      "actualPt": 5.74999999736928,
+      "thresholdPt": 6,
+      "bounds": {
+        "x": 0.21329817893049352,
+        "y": 0.1475405937872521,
+        "width": 0.04675374942086576,
+        "height": 0.04329850687693383
+      },
+      "reason": "Supported retained text is below the final-size font threshold."
+    }
+  ],
+  "manualReview": {
+    "status": "needs-change",
+    "note": "桌面默认缩放；灰度中红绿系列亮度接近，建议增加线型区分并加粗细线。"
+  },
+  "colorModel": {
+    "id": "machado",
+    "version": "2009-2010",
+    "severity": 100,
+    "sourceUrl": "https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html"
+  }
+}

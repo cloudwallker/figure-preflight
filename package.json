@@ -1,0 +1,26 @@
+{
+  "name": "figure-preflight",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": "24.15.0"
+  },
+  "scripts": {
+    "build": "tsc --noEmit && node scripts/build.mjs",
+    "test:unit": "node scripts/test-unit.mjs",
+    "test:browser": "node scripts/test-browser.mjs",
+    "test": "npm run build && npm run test:unit && npm run fixtures:verify && npm run test:browser",
+    "fixtures:generate": "node scripts/fixtures.mjs generate",
+    "fixtures:verify": "node scripts/fixtures.mjs verify",
+    "serve": "node serve.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@types/node": "24.10.1",
+    "ajv": "8.18.0",
+    "esbuild": "0.25.12",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,6 @@
+* text=auto eol=lf
+# Preserve exact Matplotlib path formatting while retaining text diffs.
+fixtures/*.svg whitespace=-blank-at-eol
+examples/*.svg whitespace=-blank-at-eol
+# Keep original third-party license formatting verbatim.
+assets/LICENSE_DEJAVU whitespace=-blank-at-eol

@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8"><title>Measurement module harness</title>
+<button id="probe">Probe</button><button id="cancel">Cancel</button><output id="ready">loading</output><div id="stage"></div>
+<script type="module">
+window.events=[];window.probes=[];window.selected=null;
+document.getElementById('probe').onclick=()=>events.push(performance.now());
+document.getElementById('cancel').onclick=()=>window.controller?.abort();
+let last=performance.now();setInterval(()=>{const now=performance.now();probes.push({at:now,extra:now-last-50});last=now},50);
+try{const api=await import('/api.js');for(const name of ['input','measure','font','rules'])window[name+'Module']=api}catch(e){for(const name of ['input','measure','font','rules'])window[name+'Error']=String(e)}
+document.getElementById('ready').textContent='ready';
+</script>

@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.venv/
+.cache/
+test-results/
+playwright-report/
+__pycache__/
+.env
+.env.*
+!.env.example
+*.log
+
+# Local development and publication records
+/docs/superpowers/
+/.superpowers/
+/.github-publish-work/
+/.codex/
+/.agents/
+/.claude/
+/.cursor/

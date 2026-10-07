@@ -1,0 +1,1372 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Figure report v1",
+  "$ref": "#/definitions/FigureReport",
+  "definitions": {
+    "Matrix6": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "number"
+        },
+        "b": {
+          "type": "number"
+        },
+        "c": {
+          "type": "number"
+        },
+        "d": {
+          "type": "number"
+        },
+        "e": {
+          "type": "number"
+        },
+        "f": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "additionalProperties": false
+    },
+    "ViewBox": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "height": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "additionalProperties": false
+    },
+    "Bounds": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "additionalProperties": false
+    },
+    "Diagnostic": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "level": {
+          "enum": [
+            "error",
+            "unassessed",
+            "info"
+          ]
+        },
+        "sourcePath": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^/0(?:/[0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "level",
+        "sourcePath",
+        "message"
+      ],
+      "additionalProperties": false
+    },
+    "RootGeometry": {
+      "type": "object",
+      "properties": {
+        "viewBox": {
+          "$ref": "#/definitions/ViewBox"
+        },
+        "originalWidthPx": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "originalHeightPx": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "preserveAspectRatio": {
+          "type": "string"
+        },
+        "aspectBasis": {
+          "enum": [
+            "root-dimensions",
+            "viewBox"
+          ]
+        }
+      },
+      "required": [
+        "viewBox",
+        "originalWidthPx",
+        "originalHeightPx",
+        "preserveAspectRatio",
+        "aspectBasis"
+      ],
+      "additionalProperties": false
+    },
+    "Capability": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "enabled"
+            },
+            "reasonCodes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 0
+            }
+          },
+          "required": [
+            "status",
+            "reasonCodes"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "disabled"
+            },
+            "reasonCodes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "reasonCodes"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "SourceNode": {
+      "type": "object",
+      "properties": {
+        "objectId": {
+          "type": "string",
+          "pattern": "^o[0-9]+$"
+        },
+        "ordinal": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourcePath": {
+          "type": "string",
+          "pattern": "^/0(?:/[0-9]+)*$"
+        },
+        "sourceId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tag": {
+          "type": "string"
+        },
+        "sanitizedId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "retained": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "objectId",
+        "ordinal",
+        "sourcePath",
+        "sourceId",
+        "tag",
+        "sanitizedId",
+        "retained"
+      ],
+      "additionalProperties": false
+    },
+    "ResourceCost": {
+      "type": "object",
+      "properties": {
+        "expandedVectorCommands": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "drawWeight": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "expandedVectorCommands",
+        "drawWeight"
+      ],
+      "additionalProperties": false
+    },
+    "PreparedSvg": {
+      "type": "object",
+      "properties": {
+        "resourceCost": {
+          "$ref": "#/definitions/ResourceCost"
+        },
+        "profileId": {
+          "const": "matplotlib-text-svg-v1"
+        },
+        "sanitizedMarkup": {
+          "type": "string"
+        },
+        "rootGeometry": {
+          "$ref": "#/definitions/RootGeometry"
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceNode"
+          }
+        },
+        "diagnostics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Diagnostic"
+          }
+        },
+        "inputSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "label": {
+          "type": "string"
+        },
+        "preview": {
+          "$ref": "#/definitions/Capability"
+        }
+      },
+      "required": [
+        "resourceCost",
+        "profileId",
+        "sanitizedMarkup",
+        "rootGeometry",
+        "nodes",
+        "diagnostics",
+        "inputSha256",
+        "label",
+        "preview"
+      ],
+      "additionalProperties": false
+    },
+    "ParseOutcome": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "accepted"
+            },
+            "prepared": {
+              "$ref": "#/definitions/PreparedSvg"
+            }
+          },
+          "required": [
+            "kind",
+            "prepared"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "invalid",
+                "rejected",
+                "limited"
+              ]
+            },
+            "diagnostics": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Diagnostic"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "diagnostics"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "TrustedFontAssets": {
+      "type": "object",
+      "properties": {
+        "family": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "base64": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "licenseRef": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "family",
+        "version",
+        "base64",
+        "sha256",
+        "licenseRef"
+      ],
+      "additionalProperties": false
+    },
+    "TrustedAssets": {
+      "type": "object",
+      "properties": {
+        "appJs": {
+          "type": "string"
+        },
+        "css": {
+          "type": "string"
+        },
+        "font": {
+          "$ref": "#/definitions/TrustedFontAssets"
+        }
+      },
+      "required": [
+        "appJs",
+        "css",
+        "font"
+      ],
+      "additionalProperties": false
+    },
+    "FontStatus": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "loaded",
+            "unavailable"
+          ]
+        },
+        "family": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "licenseRef": {
+          "type": "string"
+        },
+        "reasonCodes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "family",
+        "version",
+        "sha256",
+        "licenseRef",
+        "reasonCodes"
+      ],
+      "additionalProperties": false
+    },
+    "MeasureOptions": {
+      "type": "object",
+      "properties": {
+        "widthMm": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 500
+        },
+        "profileId": {
+          "const": "matplotlib-text-svg-v1"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fontStatus": {
+          "$ref": "#/definitions/FontStatus"
+        }
+      },
+      "required": [
+        "widthMm",
+        "profileId",
+        "revision",
+        "fontStatus"
+      ],
+      "additionalProperties": false
+    },
+    "FinalSize": {
+      "type": "object",
+      "properties": {
+        "widthMm": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 500
+        },
+        "heightMm": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 500
+        },
+        "widthPx": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 2048
+        },
+        "heightPx": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 2048
+        }
+      },
+      "required": [
+        "widthMm",
+        "heightMm",
+        "widthPx",
+        "heightPx"
+      ],
+      "additionalProperties": false
+    },
+    "Environment": {
+      "type": "object",
+      "properties": {
+        "toolVersion": {
+          "type": "string"
+        },
+        "browserName": {
+          "type": "string"
+        },
+        "browserVersion": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "devicePixelRatio": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "font": {
+          "$ref": "#/definitions/FontStatus"
+        }
+      },
+      "required": [
+        "toolVersion",
+        "browserName",
+        "browserVersion",
+        "platform",
+        "devicePixelRatio",
+        "font"
+      ],
+      "additionalProperties": false
+    },
+    "ObjectMeasurement": {
+      "type": "object",
+      "properties": {
+        "objectId": {
+          "type": "string",
+          "pattern": "^o[0-9]+$"
+        },
+        "sourcePath": {
+          "type": "string",
+          "pattern": "^/0(?:/[0-9]+)*$"
+        },
+        "sourceId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kind": {
+          "enum": [
+            "text",
+            "stroke"
+          ]
+        },
+        "status": {
+          "enum": [
+            "measured",
+            "unassessed",
+            "excluded"
+          ]
+        },
+        "localValue": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "matrix": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Matrix6"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "finalPt": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "finalMm": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "bounds": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Bounds"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "locationAccuracy": {
+          "enum": [
+            "exact-environment",
+            "approximate",
+            "unavailable"
+          ]
+        },
+        "reasonCodes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "objectId",
+        "sourcePath",
+        "sourceId",
+        "kind",
+        "status",
+        "localValue",
+        "matrix",
+        "finalPt",
+        "finalMm",
+        "bounds",
+        "locationAccuracy",
+        "reasonCodes"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "measured"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "localValue": {
+                "type": "number"
+              },
+              "matrix": {
+                "$ref": "#/definitions/Matrix6"
+              },
+              "finalPt": {
+                "type": "number"
+              },
+              "finalMm": {
+                "type": "number"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "finalPt": {
+                "type": "null"
+              },
+              "finalMm": {
+                "type": "null"
+              },
+              "reasonCodes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "bounds": {
+                "type": "null"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "locationAccuracy": {
+                "const": "unavailable"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "locationAccuracy": {
+                "enum": [
+                  "exact-environment",
+                  "approximate"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Counts": {
+      "type": "object",
+      "properties": {
+        "discovered": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "measured": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unassessed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "excluded": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pending": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "discovered",
+        "measured",
+        "unassessed",
+        "excluded",
+        "pending"
+      ],
+      "additionalProperties": false
+    },
+    "Coverage": {
+      "type": "object",
+      "properties": {
+        "enumerationComplete": {
+          "type": "boolean"
+        },
+        "text": {
+          "$ref": "#/definitions/Counts"
+        },
+        "stroke": {
+          "$ref": "#/definitions/Counts"
+        },
+        "textCompleteness": {
+          "const": "retained-text-only"
+        },
+        "possibleOutline": {
+          "type": "boolean"
+        },
+        "reasonCodes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "enumerationComplete",
+        "text",
+        "stroke",
+        "textCompleteness",
+        "possibleOutline",
+        "reasonCodes"
+      ],
+      "additionalProperties": false
+    },
+    "RunState": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "complete"
+            },
+            "stopReason": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "status",
+            "stopReason"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "partial"
+            },
+            "stopReason": {
+              "enum": [
+                "cancelled",
+                "timeout",
+                "engine-error"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "stopReason"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "cancelled",
+                "timeout",
+                "engine-error",
+                "limited"
+              ]
+            },
+            "stopReason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "stopReason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "MeasurementReport": {
+      "type": "object",
+      "properties": {
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "profileId": {
+          "const": "matplotlib-text-svg-v1"
+        },
+        "run": {
+          "$ref": "#/definitions/RunState"
+        },
+        "finalSize": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FinalSize"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "environment": {
+          "$ref": "#/definitions/Environment"
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ObjectMeasurement"
+          }
+        },
+        "coverage": {
+          "$ref": "#/definitions/Coverage"
+        },
+        "diagnostics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Diagnostic"
+          }
+        },
+        "elapsedMs": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "revision",
+        "profileId",
+        "run",
+        "finalSize",
+        "environment",
+        "objects",
+        "coverage",
+        "diagnostics",
+        "elapsedMs"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "run": {
+                "properties": {
+                  "status": {
+                    "const": "complete"
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "finalSize": {
+                "$ref": "#/definitions/FinalSize"
+              },
+              "coverage": {
+                "properties": {
+                  "enumerationComplete": {
+                    "const": true
+                  },
+                  "text": {
+                    "properties": {
+                      "pending": {
+                        "const": 0
+                      }
+                    }
+                  },
+                  "stroke": {
+                    "properties": {
+                      "pending": {
+                        "const": 0
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Thresholds": {
+      "type": "object",
+      "properties": {
+        "minFontPt": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 72
+        },
+        "minStrokePt": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 10
+        }
+      },
+      "required": [
+        "minFontPt",
+        "minStrokePt"
+      ],
+      "additionalProperties": false
+    },
+    "Finding": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "objectId": {
+          "type": "string",
+          "pattern": "^o[0-9]+$"
+        },
+        "ruleId": {
+          "enum": [
+            "SMALL_TEXT",
+            "THIN_STROKE"
+          ]
+        },
+        "actualPt": {
+          "type": "number"
+        },
+        "thresholdPt": {
+          "type": "number"
+        },
+        "bounds": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Bounds"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "objectId",
+        "ruleId",
+        "actualPt",
+        "thresholdPt",
+        "bounds",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "ManualReview": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "not-reviewed",
+            "needs-change",
+            "reviewed"
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "FigureReport": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "generatedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "inputSha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "profileId": {
+              "const": "matplotlib-text-svg-v1"
+            },
+            "elementCount": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "label",
+            "inputSha256",
+            "profileId",
+            "elementCount"
+          ],
+          "additionalProperties": false
+        },
+        "preview": {
+          "$ref": "#/definitions/Capability"
+        },
+        "measurement": {
+          "$ref": "#/definitions/MeasurementReport"
+        },
+        "thresholds": {
+          "$ref": "#/definitions/Thresholds"
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Finding"
+          }
+        },
+        "manualReview": {
+          "$ref": "#/definitions/ManualReview"
+        },
+        "colorModel": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "severity": {
+              "const": 100
+            },
+            "sourceUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "version",
+            "severity",
+            "sourceUrl"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "generatedAt",
+        "source",
+        "preview",
+        "measurement",
+        "thresholds",
+        "findings",
+        "manualReview",
+        "colorModel"
+      ],
+      "additionalProperties": false
+    },
+    "LengthOutcome": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "valid"
+            },
+            "cssPx": {
+              "type": "number"
+            },
+            "sourceUnit": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "cssPx",
+            "sourceUnit"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "unassessed"
+            },
+            "code": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "code"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "SimilarityOutcome": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "similarity"
+            },
+            "scale": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "kind",
+            "scale"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "unassessed"
+            },
+            "reason": {
+              "enum": [
+                "nonuniform",
+                "singular",
+                "nonfinite"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Limits": {
+      "type": "object",
+      "properties": {
+        "maxInputBytes": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxElements": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxDepth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxAttributeBytes": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxPathBytes": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxPathCommands": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxPathCommandsPerPath": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxExpandedVectorCommands": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxRasterWorkPixels": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxTextChars": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxUseInstances": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxPreviewSidePx": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxPreviewAreaPx": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "minFinalMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxFinalMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "batchSize": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "measureBudgetMs": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "maxInputBytes",
+        "maxElements",
+        "maxDepth",
+        "maxAttributeBytes",
+        "maxPathBytes",
+        "maxPathCommands",
+        "maxPathCommandsPerPath",
+        "maxExpandedVectorCommands",
+        "maxRasterWorkPixels",
+        "maxTextChars",
+        "maxUseInstances",
+        "maxPreviewSidePx",
+        "maxPreviewAreaPx",
+        "minFinalMm",
+        "maxFinalMm",
+        "batchSize",
+        "measureBudgetMs"
+      ],
+      "additionalProperties": false,
+      "description": "Production bounds: input 2097152 bytes; 4096 elements; depth 64; attribute 65536 bytes; path 524288 bytes and 4096 commands; 1024 commands per geometry sequence; 2048 expanded vector commands; 128000000 ceil-viewport pixels times conservative draw weight; text 131072 characters; use 2000. parseSvg only permits overrides that tighten these bounds."
+    },
+    "PreviewMode": {
+      "enum": [
+        "original",
+        "grayscale",
+        "protanopia-simulation",
+        "deuteranopia-simulation"
+      ]
+    },
+    "SelectionEvent": {
+      "type": "object",
+      "properties": {
+        "objectId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^o[0-9]+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mode": {
+          "$ref": "#/definitions/PreviewMode"
+        },
+        "origin": {
+          "enum": [
+            "pointer",
+            "keyboard"
+          ]
+        }
+      },
+      "required": [
+        "objectId",
+        "mode",
+        "origin"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
