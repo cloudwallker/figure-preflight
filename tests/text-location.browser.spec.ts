@@ -12,7 +12,7 @@ for(const dpr of [1,2])test(`text-location independent ink/envelope, advance and
  const stage=document.getElementById('stage')!;stage.style.transform=`scale(${fit})`;return w.measureModule.measureSvg(p.prepared,{widthMm,revision:0,profileId:p.prepared.profileId,fontStatus:w.fontStatus},stage);},{xml:readFileSync('fixtures/'+name,'utf8'),widthMm:c.widthMm,fit,rootTransform:c.rootTransform});
  // Bounded CI evidence for the synthetic Time label; measurement and independent assertions stay unchanged.
  if(dpr===1&&name==='01-bad.svg'&&c===data.cases[0]){
-  const diagnostic=await page.evaluate(async({xml,widthPx,heightPx,fit,rootTransform,actual})=>{
+  const diagnostics=await page.evaluate(async({xml,widthPx,heightPx,fit,rootTransform,actual})=>{
    const w=window as any,stage=document.getElementById('stage')!,source=new DOMParser().parseFromString(xml,'image/svg+xml').documentElement;
    const label=source.querySelector('#text_6 text') as SVGTextElement;
    if(label?.textContent!=='Time')throw Error('Expected the synthetic Time diagnostic label');
@@ -26,6 +26,7 @@ for(const dpr of [1,2])test(`text-location independent ink/envelope, advance and
     environment:{browserName:actual.environment.browserName,browserVersion:actual.environment.browserVersion,platform:actual.environment.platform},
     fontStatus:{status:w.fontStatus.status,family:w.fontStatus.family,version:w.fontStatus.version,sha256:w.fontStatus.sha256,reasonCodes:w.fontStatus.reasonCodes.slice(0,4)},
     fontBytesSha256:hash,measured:{bounds:actual.label.bounds,matrix:actual.label.matrix,finalPt:actual.label.finalPt,locationAccuracy:actual.label.locationAccuracy},samples:[],cleanup:null};
+   let renderingDiagnostic:any=null;
    const sample=(parent:HTMLElement,mount:string)=>{
     const host=document.createElement('div');host.style.cssText='all:initial;position:absolute;left:0;top:0;opacity:0;pointer-events:none;';host.setAttribute('aria-hidden','true');hosts.push(host);
     const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox',source.getAttribute('viewBox')!);svg.setAttribute('width',String(widthPx));svg.setAttribute('height',String(heightPx));
@@ -36,7 +37,21 @@ for(const dpr of [1,2])test(`text-location independent ink/envelope, advance and
     const geometry=(text:SVGTextElement)=>{const b=text.getBBox(),m=text.getScreenCTM()!,css=getComputedStyle(text),points=[[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]].map(([x,y])=>({x:m.a*x+m.c*y+m.e,y:m.b*x+m.d*y+m.f}));
      const style=Object.fromEntries(['fontFamily','fontSize','fontWeight','fontStyle','fontStretch','fontVariant','fontKerning','fontFeatureSettings','fontVariationSettings','fontOpticalSizing','letterSpacing','textAnchor'].map(k=>[k,String((css as any)[k]).slice(0,128)]));
      return {style,bbox:{x:b.x,y:b.y,width:b.width,height:b.height},computedTextLength:text.getComputedTextLength(),screenMatrix:{a:m.a,b:m.b,c:m.c,d:m.d,e:m.e,f:m.f},screenAabb:[Math.min(...points.map(p=>p.x)),Math.min(...points.map(p=>p.y)),Math.max(...points.map(p=>p.x)),Math.max(...points.map(p=>p.y))]};};
-    return {mount,original:geometry(original),alias:geometry(alias)};
+    const pair={mount,original:geometry(original),alias:geometry(alias)};
+    if(mount==='body-owned-shadow'){
+     const originalStyle=original.getAttribute('style'),originalInlineTextRendering=original.style.textRendering;
+     const renderingGeometry=()=>{const b=original.getBBox(),m=original.getScreenCTM()!,css=getComputedStyle(original),length=original.getComputedTextLength(),screenFactor=Math.hypot(m.a,m.b);
+      if(original.getNumberOfChars()!==4)throw Error('Expected four synthetic Time characters');
+      const characters=Array.from({length:4},(_,i)=>{const start=original.getStartPositionOfChar(i),end=original.getEndPositionOfChar(i);return {index:i,start:{x:start.x,y:start.y},end:{x:end.x,y:end.y},substringLength:original.getSubStringLength(i,1)};});
+      return {computedTextRendering:css.textRendering,fontFamily:css.fontFamily,fontSize:css.fontSize,fontKerning:css.fontKerning,bbox:{x:b.x,y:b.y,width:b.width,height:b.height},computedTextLength:length,substringLength:original.getSubStringLength(0,4),screenMatrix:{a:m.a,b:m.b,c:m.c,d:m.d,e:m.e,f:m.f},screenFactor,advanceScreenPx:length*screenFactor,characters};};
+     const auto=renderingGeometry();let geometricPrecision;
+     try{original.style.textRendering='geometricPrecision';geometricPrecision=renderingGeometry();}
+     finally{if(originalStyle===null)original.removeAttribute('style');else original.setAttribute('style',originalStyle);}
+     const restoredBox=original.getBBox();
+     renderingDiagnostic={text:'Time',dpr:devicePixelRatio,fit,rootTransform,widthPx,heightPx,mount,fontSha256:hash,environment:result.environment,originalInlineTextRendering,auto,geometricPrecision,
+      restored:{inlineTextRendering:original.style.textRendering,computedTextRendering:getComputedStyle(original).textRendering,bbox:{x:restoredBox.x,y:restoredBox.y,width:restoredBox.width,height:restoredBox.height},computedTextLength:original.getComputedTextLength(),styleAttributeRestored:original.getAttribute('style')===originalStyle}};
+    }
+    return pair;
    };
    try{
     await Promise.race([face.load(),new Promise<never>((_,reject)=>{timer=setTimeout(()=>reject(Error('Diagnostic font load timeout')),2000);})]);
@@ -44,9 +59,11 @@ for(const dpr of [1,2])test(`text-location independent ink/envelope, advance and
     // Production mounts outside caller fit; the second pair records the same viewport inside caller fit.
     result.samples.push(sample(document.body,'body-owned-shadow'),sample(stage,'caller-stage-shadow'));
    }finally{if(timer!==undefined)clearTimeout(timer);for(const host of hosts)host.remove();document.fonts.delete(face);result.cleanup={hostsRemoved:hosts.every(host=>!host.isConnected),aliasRemoved:!document.fonts.has(face)};}
-   return result;
+   return {font:result,rendering:renderingDiagnostic};
   },{xml:readFileSync('fixtures/'+name,'utf8'),widthPx:c.widthPx,heightPx:c.heightPx,fit,rootTransform:c.rootTransform,actual:{environment:measured.environment,label:measured.objects.find((o:any)=>o.objectId===c.records.find((r:any)=>r.gid==='text_6').objectId&&o.kind==='text')}});
+  const diagnostic=diagnostics.font;
   const line=JSON.stringify({...diagnostic,widthMm:c.widthMm});if(line.length>8192)throw Error('Diagnostic output limit');console.log('FIGURE_TIME_FONT_DIAGNOSTIC '+line);
+  const renderingLine=JSON.stringify({...diagnostics.rendering,widthMm:c.widthMm});if(renderingLine.length>4096)throw Error('Rendering diagnostic output limit');console.log('FIGURE_TIME_RENDERING_DIAGNOSTIC '+renderingLine);
  }
  expect(measured.run.status,`${name} complete`).toBe('complete');
  if(name.startsWith('01')||Number(name.slice(0,2))>=21){
