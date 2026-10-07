@@ -76,7 +76,7 @@ out={'fontSha256':hashlib.sha256(FONT.read_bytes()).hexdigest(),'fontVersion':'2
 for p in sorted(fixture_dir.glob('*.svg')):
     n=int(p.name[:2])
     if n in (1,2,3,4,5,6,7,8,9,10) or n>=21:out['files'][p.name]=reference(p)
-(output_dir/'text-reference.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
+(output_dir/'text-reference.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n')
 files=sorted(fixture_dir.glob('*.svg'));measurement_ids=['01']+[str(i) for i in range(21,40)]
 entries=[]
 for p in files:
@@ -84,5 +84,5 @@ for p in files:
     parse={'18':'rejected','19':'limited','20':'invalid'}.get(ident,'accepted')
     entries.append({'id':ident,'file':p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'themeIds':[ident] if int(ident)<=20 else [],'measurementAcceptanceIds':[ident] if is_m else [],'expectedParse':parse,'expectedPreview':'enabled' if parse=='accepted' else None,'expectedRun':'complete' if parse=='accepted' else None,'textScope':'direct retained text/tspan; outlined glyph text remains unknown','strokeScope':'visible direct geometry and direct text stroke; defs excluded and use unassessed','truthSource':'text-reference.json#files/'+p.name if p.name in out['files'] else 'generator parameters; counterexample coverage only','injectedProblems':{'SMALL_TEXT':3,'THIN_STROKE':1} if ident=='01' else {'SMALL_TEXT':1,'THIN_STROKE':1} if is_m else None,'manualInspection':{'record':'manual-inspection.json#'+ident}})
 manifest={'schemaVersion':1,'actualFileCount':len(files),'actualThemeCount':len([p for p in files if int(p.name[:2])<=20]),'plannedThemeCount':20,'themeIds':[f'{i:02}' for i in range(1,21)],'measurementAcceptanceIds':measurement_ids,'measurementAcceptanceCount':len(measurement_ids),'entries':entries,'pendingThemes':[],'parameterizedSafetyVariants':'tests/input.browser.spec.ts and tests/input-review.browser.spec.ts and tests/render-budget.browser.spec.ts and tests/performance-cases.ts; separate from file and M counts'}
-(output_dir/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
+(output_dir/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps({'files':len(out['files']),'fontSha256':out['fontSha256']}))

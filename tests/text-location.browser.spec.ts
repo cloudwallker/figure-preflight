@@ -10,6 +10,44 @@ for(const dpr of [1,2])test(`text-location independent ink/envelope, advance and
  for(const name of names){const data=reference.files[name];for(const c of data.cases){for(const fit of (Number(name.slice(0,2))<=10?[1,.63]:[1])){
  const measured=await page.evaluate(async({xml,widthMm,fit,rootTransform})=>{const w=window as any,p=w.inputModule.parseSvg(new TextEncoder().encode(rootTransform?xml.replace('<svg ','<svg transform="'+rootTransform+'" '):xml),'location.svg');if(p.kind!=='accepted'||p.prepared.preview.status!=='enabled')throw Error(JSON.stringify(p));
  const stage=document.getElementById('stage')!;stage.style.transform=`scale(${fit})`;return w.measureModule.measureSvg(p.prepared,{widthMm,revision:0,profileId:p.prepared.profileId,fontStatus:w.fontStatus},stage);},{xml:readFileSync('fixtures/'+name,'utf8'),widthMm:c.widthMm,fit,rootTransform:c.rootTransform});
+ // Bounded CI evidence for the synthetic Time label; measurement and independent assertions stay unchanged.
+ if(dpr===1&&name==='01-bad.svg'&&c===data.cases[0]){
+  const diagnostic=await page.evaluate(async({xml,widthPx,heightPx,fit,rootTransform,actual})=>{
+   const w=window as any,stage=document.getElementById('stage')!,source=new DOMParser().parseFromString(xml,'image/svg+xml').documentElement;
+   const label=source.querySelector('#text_6 text') as SVGTextElement;
+   if(label?.textContent!=='Time')throw Error('Expected the synthetic Time diagnostic label');
+   const assets=await(await fetch('/font-assets.json')).json(),bytes=Uint8Array.from(atob(assets.base64),c=>c.charCodeAt(0));
+   if(bytes.length>1048576)throw Error('Diagnostic font byte limit');
+   const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');
+   if(hash!==w.fontStatus.sha256)throw Error('Diagnostic trusted font hash mismatch');
+   const family='FigurePreflightTimeDiagnostic_'+crypto.randomUUID(),face=new FontFace(family,bytes,{style:'normal',weight:'400',stretch:'normal'}),hosts:HTMLElement[]=[];
+   let timer:ReturnType<typeof setTimeout>|undefined;
+   const result:any={text:'Time',dpr:devicePixelRatio,fit,rootTransform,widthPx,heightPx,stageTransform:stage.style.transform,
+    environment:{browserName:actual.environment.browserName,browserVersion:actual.environment.browserVersion,platform:actual.environment.platform},
+    fontStatus:{status:w.fontStatus.status,family:w.fontStatus.family,version:w.fontStatus.version,sha256:w.fontStatus.sha256,reasonCodes:w.fontStatus.reasonCodes.slice(0,4)},
+    fontBytesSha256:hash,measured:{bounds:actual.label.bounds,matrix:actual.label.matrix,finalPt:actual.label.finalPt,locationAccuracy:actual.label.locationAccuracy},samples:[],cleanup:null};
+   const sample=(parent:HTMLElement,mount:string)=>{
+    const host=document.createElement('div');host.style.cssText='all:initial;position:absolute;left:0;top:0;opacity:0;pointer-events:none;';host.setAttribute('aria-hidden','true');hosts.push(host);
+    const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox',source.getAttribute('viewBox')!);svg.setAttribute('width',String(widthPx));svg.setAttribute('height',String(heightPx));
+    if(source.hasAttribute('preserveAspectRatio'))svg.setAttribute('preserveAspectRatio',source.getAttribute('preserveAspectRatio')!);
+    if(rootTransform)svg.setAttribute('transform',rootTransform);
+    const original=label.cloneNode(true) as SVGTextElement,alias=label.cloneNode(true) as SVGTextElement;original.removeAttribute('id');alias.removeAttribute('id');alias.style.fontFamily='"'+family+'"';svg.append(original,alias);
+    host.attachShadow({mode:'closed'}).appendChild(svg);parent.appendChild(host);
+    const geometry=(text:SVGTextElement)=>{const b=text.getBBox(),m=text.getScreenCTM()!,css=getComputedStyle(text),points=[[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]].map(([x,y])=>({x:m.a*x+m.c*y+m.e,y:m.b*x+m.d*y+m.f}));
+     const style=Object.fromEntries(['fontFamily','fontSize','fontWeight','fontStyle','fontStretch','fontVariant','fontKerning','fontFeatureSettings','fontVariationSettings','fontOpticalSizing','letterSpacing','textAnchor'].map(k=>[k,String((css as any)[k]).slice(0,128)]));
+     return {style,bbox:{x:b.x,y:b.y,width:b.width,height:b.height},computedTextLength:text.getComputedTextLength(),screenMatrix:{a:m.a,b:m.b,c:m.c,d:m.d,e:m.e,f:m.f},screenAabb:[Math.min(...points.map(p=>p.x)),Math.min(...points.map(p=>p.y)),Math.max(...points.map(p=>p.x)),Math.max(...points.map(p=>p.y))]};};
+    return {mount,original:geometry(original),alias:geometry(alias)};
+   };
+   try{
+    await Promise.race([face.load(),new Promise<never>((_,reject)=>{timer=setTimeout(()=>reject(Error('Diagnostic font load timeout')),2000);})]);
+    document.fonts.add(face);result.aliasStatus=face.status;result.aliasRegistered=document.fonts.has(face);
+    // Production mounts outside caller fit; the second pair records the same viewport inside caller fit.
+    result.samples.push(sample(document.body,'body-owned-shadow'),sample(stage,'caller-stage-shadow'));
+   }finally{if(timer!==undefined)clearTimeout(timer);for(const host of hosts)host.remove();document.fonts.delete(face);result.cleanup={hostsRemoved:hosts.every(host=>!host.isConnected),aliasRemoved:!document.fonts.has(face)};}
+   return result;
+  },{xml:readFileSync('fixtures/'+name,'utf8'),widthPx:c.widthPx,heightPx:c.heightPx,fit,rootTransform:c.rootTransform,actual:{environment:measured.environment,label:measured.objects.find((o:any)=>o.objectId===c.records.find((r:any)=>r.gid==='text_6').objectId&&o.kind==='text')}});
+  const line=JSON.stringify({...diagnostic,widthMm:c.widthMm});if(line.length>8192)throw Error('Diagnostic output limit');console.log('FIGURE_TIME_FONT_DIAGNOSTIC '+line);
+ }
  expect(measured.run.status,`${name} complete`).toBe('complete');
  if(name.startsWith('01')||Number(name.slice(0,2))>=21){
   const actualFindings=await page.evaluate(r=>(window as any).rulesModule.evaluateThresholds(r,{minFontPt:6,minStrokePt:.25}),measured);
