@@ -49,3 +49,47 @@ test('same text object retains both roles and unknown bounds never produce a pre
  await page.goto('/app');await page.locator('#width').fill('50.8');const xml='<svg xmlns="http://www.w3.org/2000/svg" width="144pt" height="72pt" viewBox="0 0 144 72"><text x="10" y="20" font-family="DejaVu Sans" font-size="5px" stroke="black" stroke-width=".1">HIM</text></svg>';await page.locator('#file').setInputFiles({name:'dual.svg',mimeType:'image/svg+xml',buffer:Buffer.from(xml)});await expect(page.locator('#save-html')).toBeEnabled();await expect(page.locator('[data-finding]')).toHaveCount(2);const ids=await page.locator('[data-finding]').evaluateAll(es=>es.map(e=>e.getAttribute('data-object-id')));expect(ids[0]).toBe(ids[1]);await page.locator('[data-finding]').first().click();await expect(page.locator('#selection-detail')).toContainText('文字 · measured');await expect(page.locator('#selection-detail')).toContainText('描边 · measured');await expect(page.locator('[data-selection]')).toHaveCount(8);
  await page.locator('#file').setInputFiles({name:'unknown.svg',mimeType:'image/svg+xml',buffer:Buffer.from(xml.replace('<text ','<text transform="scale(2 1)" '))});await expect(page.locator('#save-html')).toBeEnabled();await expect(page.locator('[data-finding]')).toHaveCount(0);await page.locator('.preview-panel text[role=button]').first().focus();await page.keyboard.press('Enter');await expect(page.locator('#selection-detail')).toContainText('无法定位');await expect(page.locator('[data-selection]')).toHaveCount(0);await expect(page.locator('#coverage')).toContainText('未检测');
 });
+
+test('a pending simulation preserves the selected finding and cannot remount after replacement',async({page})=>{
+ await page.addInitScript(()=>{
+  const w=window as any,decode=HTMLImageElement.prototype.decode;
+  let gate:Promise<void>;
+  w.pauseSimulation=()=>{
+   w.waitingImages=0;
+   gate=new Promise<void>(release=>{w.releaseSimulation=release;});
+  };
+  w.pauseSimulation();
+  HTMLImageElement.prototype.decode=async function(){
+   await decode.call(this);
+   if(this.src.startsWith('data:image/png;')){
+    w.waitingImages++;
+    await gate;
+   }
+  };
+ });
+ await page.goto('/app');
+ const file=page.locator('#file'),panels=page.locator('.preview-panel');
+ await file.setInputFiles('fixtures/01-bad.svg');
+ await page.waitForFunction(()=>(window as any).waitingImages===3);
+ await expect(panels.locator('[data-layer="figure"] > svg')).toHaveCount(1);
+ const finding=page.locator('[data-finding]').first(),id=await finding.getAttribute('data-object-id');
+ await finding.click();
+ await page.evaluate(()=>(window as any).releaseSimulation());
+ await expect(page.locator('#save-html')).toBeEnabled();
+ await expect(panels.locator('[tabindex="0"][aria-pressed="true"]')).toHaveCount(4);
+ await expect(panels.locator('[data-selection="'+id+'"]')).toHaveCount(4);
+
+ await page.evaluate(()=>(window as any).pauseSimulation());
+ await file.setInputFiles('fixtures/01-bad.svg');
+ await page.waitForFunction(()=>(window as any).waitingImages===3);
+ const oldRoots=await panels.locator('svg[role="group"]').elementHandles();
+ await file.setInputFiles('fixtures/02-fixed.svg');
+ await expect(page.locator('#source-label')).toHaveText('02-fixed.svg');
+ await page.evaluate(()=>(window as any).releaseSimulation());
+ await expect(page.locator('#save-html')).toBeEnabled();
+ await expect(panels.locator('[data-layer="figure"] > svg')).toHaveCount(4);
+ await expect(panels.locator('[tabindex="0"][aria-pressed="true"]')).toHaveCount(0);
+ for(const root of oldRoots){
+  expect(await root.evaluate(node=>!node.isConnected&&!node.hasChildNodes())).toBe(true);
+ }
+});

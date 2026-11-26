@@ -6,6 +6,36 @@ import AjvModule from 'ajv';
 import {validateReportInvariants} from '../src/model.ts';
 const Ajv=(AjvModule as any).default??AjvModule;
 const validate=new Ajv({strict:false}).compile(JSON.parse(readFileSync('schemas/figure-report-v1.schema.json','utf8')));
+test('near-threshold findings show distinct point sizes and the shortfall online and offline', async ({ page, browser }, testInfo) => {
+ const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="144pt" height="72pt" viewBox="0 0 144 72">' +
+  '<path d="M10 30 L100 30" fill="none" stroke="black" stroke-width="0.2498"/>' +
+  '<text x="10" y="10" font-family="DejaVu Sans" font-size="5.9998">Results</text></svg>';
+ await page.goto('/app');
+ await page.locator('#width').fill('50.8');
+ await page.locator('#file').setInputFiles({ name: 'stroke.svg', mimeType: 'image/svg+xml', buffer: Buffer.from(svg) });
+ const expected = ['细线 · 0.2498 pt < 0.25 pt · 差 0.0002 pt', '小字 · 5.9998 pt < 6 pt · 差 0.0002 pt'];
+ const finding = page.locator('[data-finding]');
+ await expect(finding).toHaveText(expected);
+ await finding.first().click();
+ await expect(page.locator('#selection-detail')).toContainText('0.2498 pt');
+ await finding.last().click();
+ await expect(page.locator('#selection-detail')).toContainText('5.9998 pt');
+
+ const download = page.waitForEvent('download');
+ await page.locator('#save-html').click();
+ const path = testInfo.outputPath('stroke.html');
+ await (await download).saveAs(path);
+ const offline = await browser.newContext({ offline: true });
+ try {
+  const replay = await offline.newPage();
+  await replay.goto(pathToFileURL(path).href);
+  await expect(replay.locator('[data-finding]')).toHaveText(expected);
+  await expect(replay.locator('#selection-detail')).toContainText('5.9998 pt');
+ } finally {
+  await offline.close();
+ }
+});
+
 test('current production revision downloads consistent JSON and file HTML replays offline without measurement or network',async({page,browser,browserName})=>{
  await page.goto('/app');await page.locator('#file').setInputFiles('fixtures/01-bad.svg');await expect(page.locator('[data-finding]')).toHaveCount(4);
  const note='显示器默认缩放；灰度中红绿曲线亮度接近，需要结合线型。 </script><img src=x onerror=globalThis.hacked=1>\u2028\u2029';

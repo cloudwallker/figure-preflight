@@ -2,7 +2,7 @@
 
 ### Local SVG checks for publication-size figures
 
-**Check retained text sizes and stroke widths at your final figure width, locate findings in four linked previews, and save an offline HTML report plus structured JSON.**
+**Check retained text sizes and stroke widths at your final figure width, see how far each finding falls below its threshold, locate it in four linked previews, and save an offline HTML report plus structured JSON.**
 
 English | [中文](README_ZH.md)
 
@@ -52,7 +52,7 @@ The supported profile is `matplotlib-text-svg-v1`. Path-converted letters have n
 
 ## What the report means
 
-Text and stroke findings apply only to measured objects. The report separately preserves discovered, measured, unassessed, excluded and pending counts. Complete execution does not mean the figure passed every check. Unsupported visual features disable all previews and measurements rather than show an altered figure. Missing fonts, unsupported transforms or units may make numeric values or positions unknown; their reasons remain visible.
+For each finding, the live and saved HTML reports show the measured size, the threshold, and the shortfall in points. Near a threshold, the list and selected-object details display extra decimal places so a small difference stays visible. Text and stroke findings apply only to measured objects. The report separately preserves discovered, measured, unassessed, excluded and pending counts. Complete execution does not mean the figure passed every check. Unsupported visual features disable all previews and measurements rather than show an altered figure. Missing fonts, unsupported transforms or units may make numeric values or positions unknown; their reasons remain visible.
 
 Trusted normal DejaVu Sans 2.35 glyphs have verified font bytes and environment-specific positions. Other fonts, missing glyphs and non-normal styles keep their browser fallback appearance with downgraded positions. The saved three simulation images preserve that run; the original SVG may render fallback fonts differently on another machine. Chromium screen text can use LCD antialiasing while the simulation raster uses grayscale antialiasing.
 
@@ -79,7 +79,7 @@ npm run serve
 
 Linux development commands use `.venv/bin/python` and `npx playwright install --with-deps chromium firefox`. The scripts select the project venv; `FIGURE_PYTHON` can explicitly select another matching interpreter. Linux CI is configured and awaits a real remote run. It is not listed as a verified platform.
 
-The 39 synthetic SVG files cover 20 themes, including 20 distinct known-defect measurement cases. Independent FontTools references check values and positions; browser tests check live interactions, colors, resource limits, cancellation and offline downloads. [Fixture manifest](fixtures/manifest.json) distinguishes themes from measurement cases. [Visual inspection records](fixtures/manual-inspection.json) identify the actual reviewer and browser; they are not user adoption research.
+The 39 synthetic SVG files cover 20 themes, including 20 distinct known-defect measurement cases. FontTools provides the design metrics and outlines. On Linux, the references account for grid-fitted advances in Chromium and fractional advances and ink overflow in Firefox, using the same bundled font and Pillow/FreeType. The position tolerance is one CSS pixel on both platforms. Browser tests cover live interactions, colors, resource limits, cancellation and offline downloads. [Fixture manifest](fixtures/manifest.json) distinguishes themes from measurement cases. [Visual inspection records](fixtures/manual-inspection.json) identify the actual reviewer and browser; they are not user adoption research.
 
 Contributions should include a small synthetic reproduction, expected units/status and an independent reference where geometry changes. Run the pinned tests on both browsers. Keep unknown coverage visible, preserve limits and avoid real private figures in fixtures. Open issues should describe browser/version and source export settings. User interviews and adoption validation remain future research.
 

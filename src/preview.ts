@@ -109,10 +109,12 @@ export function createPreview(prepared:PreparedSvg,mode:PreviewMode,target:HTMLE
   for(const e of all){for(const attr of Array.from(e.attributes)){let value=attr.value;if(attr.localName==='href'&&value.startsWith('#'))value='#'+idMap.get(value.slice(1));if(attr.localName==='clip-path'||attr.localName==='style')value=value.replace(/url\(#([^)]*)\)/g,(_,id)=>`url(#${idMap.get(id)})`);if(value!==attr.value)e.setAttributeNS(attr.namespaceURI,attr.name,value);}
    if(['text','tspan','path','line','polyline','polygon','rect','circle','ellipse','use'].includes(e.localName)&&!e.closest('defs,clipPath')){e.setAttribute('tabindex','0');e.setAttribute('role','button');e.setAttribute('aria-pressed','false');e.setAttribute('aria-label','选择图中对象 '+objectIds.get(e));}await checkpoint();}
   source.setAttribute('width',String(w));source.setAttribute('height',String(h));source.setAttribute('overflow','visible');
-  await yieldTask();check();figure.append(source);selectObject(handle,state.selectedId);
-  if(mode==='original'){pending.remove();root.dataset.previewReady='true';return;}
+  const showSource=()=>{figure.append(source);selectObject(handle,state.selectedId);};
+  await yieldTask();check();
+  if(mode==='original'){showSource();pending.remove();root.dataset.previewReady='true';return;}
   const scene=sceneForMode!,snapshot=await snapshotFor(scene,mode,source);check();checkScene(scene);
   const decoded=new Image();try{decoded.src=snapshot.png;await decoded.decode();check();checkScene(scene);}finally{decoded.src='';}
+  showSource();
   const visible=svg(doc,'image',{x:'0',y:'0',width:String(w),height:String(h),href:snapshot.png,'pointer-events':'none'});root.insertBefore(visible,figure);pending.remove();root.dataset.previewReady='true';scene.decoded.add(mode);
  }catch{pending.textContent=state.disposed?'':'预览未完成，请重新导入。';root.dataset.previewError='PREVIEW_UNAVAILABLE';throw Error(state.disposed?'PREVIEW_CANCELLED':'PREVIEW_UNAVAILABLE');}})();readies.set(handle,ready);void ready.catch(()=>{});return handle;
 }
