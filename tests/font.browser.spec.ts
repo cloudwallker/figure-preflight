@@ -6,6 +6,30 @@ test('trusted bytes load with pinned identity; corrupt bytes cannot claim loaded
  return {corrupt,good,count:document.fonts.size};});
  expect(result.error).toBeUndefined();expect(result.corrupt.status).toBe('unavailable');expect(result.good.status).toBe('loaded');expect(result.good.reasonCodes).toEqual([]);expect(result.count).toBe(1);
 });
+test('reuses one registered face and checks changed contents and metadata after loading', async ({page})=>{
+ await page.goto('/');
+ await expect(page.locator('#ready')).toHaveText('ready');
+ const result=await page.evaluate(async()=>{
+  const load=(window as any).fontModule.loadTrustedFont;
+  const assets=await (await fetch('/font-assets.json')).json();
+  const first=load(assets), second=load(assets);
+  const original=assets.base64;
+  assets.base64='AA==';
+  const initial=await Promise.all([first,second]);
+  const changed=await load(assets);
+  assets.base64=original;
+  const restored=await load(assets);
+  const wrongMetadata=await load({...assets,version:'different'});
+  const count=document.fonts.size;
+  document.fonts.clear();
+  const removed=await load(assets);
+  return {initial:initial.map(s=>s.status),changed:changed.reasonCodes,restored:restored.status,
+   wrongMetadata:wrongMetadata.reasonCodes,count,removed:removed.reasonCodes};
+ });
+ expect(result).toEqual({initial:['loaded','loaded'],changed:['FONT_ASSET_MISMATCH'],restored:'loaded',
+  wrongMetadata:['FONT_ASSET_MISMATCH'],count:1,removed:['FONT_LOAD_FAILED']});
+});
+
 test('actual loaded font marks ASCII exact and missing CJK or styled face approximate',async({page})=>{
  await page.goto('/');await expect(page.locator('#ready')).toHaveText('ready');
  const result=await page.evaluate(async()=>{const w=window as any;if(!w.fontModule)return {error:w.fontError};const a=await(await fetch('/font-assets.json')).json(),fontStatus=await w.fontModule.loadTrustedFont(a);

@@ -77,7 +77,7 @@ npm run serve
 
 Linux 使用 `.venv/bin/python` 与 `npx playwright install --with-deps chromium firefox`。脚本默认读取项目 venv，也可用 `FIGURE_PYTHON` 指定匹配版本的解释器。Linux CI 已配置，实际远端运行待发布阶段执行；尚未列为已验证平台。
 
-39 张合成 SVG 覆盖 20 个主题，其中 20 张不同的已知缺陷图件用于测量验收。数值及定位采用独立 FontTools 真值，浏览器测试覆盖交互、像素、资源边界、取消与离线下载。[manifest](fixtures/manifest.json) 区分主题和测量适用样本；[逐图视觉复核](fixtures/manual-inspection.json) 记录实际检查者、浏览器与结论，不冒充用户访谈或采用研究。
+39 张合成 SVG 覆盖 20 个主题，其中 20 张不同的已知缺陷图件用于测量验收。FontTools 提供字体设计度量与轮廓。Linux 的定位参考使用同一份字体与 Pillow/FreeType，分别计算 Chromium 对齐像素后的前进量、Firefox 的分数字宽与溢出墨迹。两个平台的定位容差均为 1 CSS 像素。浏览器测试覆盖交互、像素、资源边界、取消与离线下载。[manifest](fixtures/manifest.json) 区分主题和测量适用样本；[逐图视觉复核](fixtures/manual-inspection.json) 记录实际检查者、浏览器与结论，不冒充用户访谈或采用研究。
 
 贡献时提供最小合成复现、预期单位/状态，以及几何变动的独立真值。运行两个固定浏览器的测试，保留未知覆盖范围与性能限制，不将私人图件加入仓库。问题反馈注明浏览器版本与导出配置。用户访谈和采用情况仍待研究。
 

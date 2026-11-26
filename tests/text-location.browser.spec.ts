@@ -1,8 +1,9 @@
 import {test,expect} from '@playwright/test';
 import {readFileSync} from 'node:fs';
+import {textBoundsForEngine} from './text-bounds-reference.js';
 const reference=JSON.parse(readFileSync('fixtures/text-reference.json','utf8'));
-// References are independently generated from cmap/hmtx/head/glyph outlines, never browser geometry.
-for(const dpr of [1,2])test(`text-location independent ink/envelope, advance and four-corner truth DPR ${dpr}`,async({browser})=>{
+// Both text references are generated from the bundled font, independently of browser geometry.
+for(const dpr of [1,2])test(`text-location independent ink/envelope, advance and four-corner truth DPR ${dpr}`,async({browser,browserName})=>{
  const context=await browser.newContext({deviceScaleFactor:dpr,viewport:{width:1200,height:900}}),page=await context.newPage();
  await page.goto('http://127.0.0.1:48616/');await expect(page.locator('#ready')).toHaveText('ready');
  await page.evaluate(async()=>{const w=window as any;w.fontStatus=await w.fontModule.loadTrustedFont(await(await fetch('/font-assets.json')).json());});
@@ -78,9 +79,10 @@ for(const dpr of [1,2])test(`text-location independent ink/envelope, advance and
  expect(actual.status,`${name} ${ref.gid}`).toBe('measured');expect(actual.finalPt,`${name} ${ref.gid} pt`).toBeCloseTo(ref.finalPt,2);expect(actual.locationAccuracy).toBe('exact-environment');
  const b=actual.bounds,edges=[b.x*c.widthPx,b.y*c.heightPx,(b.x+b.width)*c.widthPx,(b.y+b.height)*c.heightPx];
  if(ref.kind==='text'){
- for(const i of [0,1]){expect(edges[i],`${name} ${ref.gid} lower edge ${i}`).toBeGreaterThanOrEqual(ref.envelopeAabb[i]-1);expect(edges[i]).toBeLessThanOrEqual(ref.inkAabb[i]+1);}
- for(const i of [2,3]){expect(edges[i],`${name} ${ref.gid} fit ${fit} upper edge ${i}`).toBeLessThanOrEqual(ref.envelopeAabb[i]+1);expect(edges[i]).toBeGreaterThanOrEqual(ref.inkAabb[i]-1);}
- if(ref.advancePx){expect(Math.abs(edges[0]-ref.advancePx[0]),`${name} advance left`).toBeLessThanOrEqual(1);expect(Math.abs(edges[2]-ref.advancePx[1]),`${name} advance right`).toBeLessThanOrEqual(1);}
+ const {inkAabb,envelopeAabb,layoutPx}=textBoundsForEngine(ref,browserName);
+ for(const i of [0,1]){expect(edges[i],`${name} ${ref.gid} lower edge ${i}`).toBeGreaterThanOrEqual(envelopeAabb[i]-1);expect(edges[i]).toBeLessThanOrEqual(inkAabb[i]+1);}
+ for(const i of [2,3]){expect(edges[i],`${name} ${ref.gid} fit ${fit} upper edge ${i}`).toBeLessThanOrEqual(envelopeAabb[i]+1);expect(edges[i]).toBeGreaterThanOrEqual(inkAabb[i]-1);}
+ if(layoutPx){expect(Math.abs(edges[0]-layoutPx[0]),`${name} layout left`).toBeLessThanOrEqual(1);expect(Math.abs(edges[2]-layoutPx[1]),`${name} layout right`).toBeLessThanOrEqual(1);}
  }else for(let i=0;i<4;i++)expect(Math.abs(edges[i]-ref.boxAabb[i]),`${name} line corner ${i}`).toBeLessThanOrEqual(1);
  }
  }}}
