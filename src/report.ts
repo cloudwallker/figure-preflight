@@ -19,6 +19,12 @@ export function serializeJson(report:FigureReport):string{return escapeJson(repo
 export function escapeJson(value:unknown):string{return JSON.stringify(value,null,2).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');}
 
 function element<K extends keyof HTMLElementTagNameMap>(tag:K,text='',className=''):HTMLElementTagNameMap[K]{const e=document.createElement(tag);e.textContent=text;e.className=className;return e;}
+function pointDecimals(actualPt:number,thresholdPt:number):number {
+ const shortfall = thresholdPt - actualPt;
+ // Findings exclude differences of 1e-6 pt or smaller. Keep ordinary values at three decimals.
+ return shortfall > 0 ? Math.min(6, Math.max(3, Math.ceil(-Math.log10(shortfall)))) : 3;
+}
+
 const selections=new WeakMap<PreparedSvg,string|null>();
 export function mountReport(report:FigureReport,prepared:PreparedSvg,target:HTMLElement,font?:TrustedFontAssets):{dispose:()=>void;select:(id:string|null)=>void;ready:Promise<void>}{
  target.replaceChildren();target.dataset.revision=String(report.measurement.revision);target.dataset.sourceHash=report.source.inputSha256;
@@ -37,9 +43,14 @@ export function mountReport(report:FigureReport,prepared:PreparedSvg,target:HTML
  const select=(id:string|null)=>{if(disposed)return;selections.set(prepared,id);target.dataset.selected=id??'';for(const h of handles)selectObject(h,id);for(const button of buttons)button.setAttribute('aria-pressed',String(button.dataset.objectId===id));selection.replaceChildren();if(id===null)return;
   const objects=m.objects.filter(o=>o.objectId===id),node=prepared.nodes.find(n=>n.objectId===id);selection.append(element('h4','选中对象 '+id),element('p',node?.sourceId?'源 ID：'+node.sourceId:'源 ID：未设置'));
   if(!objects.length)selection.append(element('p','未获得该对象的测量记录。'));
-  for(const o of objects){const bounds=o.bounds;selection.append(element('p',`${o.kind==='text'?'文字':'描边'} · ${o.status} · ${o.finalPt===null?'数值未检测':o.finalPt.toFixed(3)+' pt'} · ${bounds?o.locationAccuracy:'无法定位'}${o.reasonCodes.length?' · '+o.reasonCodes.join('、'):''}`));if(bounds&&(bounds.x<0||bounds.y<0||bounds.x+bounds.width>1||bounds.y+bounds.height>1))selection.append(element('p','对象范围超出最终视口；预览按视口裁剪。'));}
+  for(const o of objects){
+   const bounds=o.bounds,threshold=o.kind==='text'?report.thresholds.minFontPt:report.thresholds.minStrokePt;
+   selection.append(element('p',`${o.kind==='text'?'文字':'描边'} · ${o.status} · ${o.finalPt===null?'数值未检测':o.finalPt.toFixed(pointDecimals(o.finalPt,threshold))+' pt'} · ${bounds?o.locationAccuracy:'无法定位'}${o.reasonCodes.length?' · '+o.reasonCodes.join('、'):''}`));if(bounds&&(bounds.x<0||bounds.y<0||bounds.x+bounds.width>1||bounds.y+bounds.height>1))selection.append(element('p','对象范围超出最终视口；预览按视口裁剪。'));}
  };
- for(const f of report.findings){const button=element('button',`${f.ruleId==='SMALL_TEXT'?'小字':'细线'} · ${f.actualPt.toFixed(3)} pt < ${f.thresholdPt} pt`);button.type='button';button.dataset.finding=f.id;button.dataset.objectId=f.objectId;button.setAttribute('aria-pressed','false');button.addEventListener('click',()=>select(f.objectId));buttons.push(button);list.append(button);}
+ for(const f of report.findings){
+  const digits=pointDecimals(f.actualPt,f.thresholdPt);
+  const gap=(f.thresholdPt-f.actualPt).toFixed(digits);
+  const button=element('button',`${f.ruleId==='SMALL_TEXT'?'小字':'细线'} · ${f.actualPt.toFixed(digits)} pt < ${f.thresholdPt} pt · 差 ${gap} pt`);button.type='button';button.dataset.finding=f.id;button.dataset.objectId=f.objectId;button.setAttribute('aria-pressed','false');button.addEventListener('click',()=>select(f.objectId));buttons.push(button);list.append(button);}
  if(font&&font.sha256!==m.environment.font.sha256)throw Error('FONT_SNAPSHOT_MISMATCH');
  for(const mode of PREVIEW_MODES){const panel=element('section','','preview-panel'),title=element('h3',MODE_LABELS[mode]),viewport=element('div','','preview-viewport');panel.append(title,viewport);grid.append(panel);if(report.preview.status==='disabled'){viewport.append(element('p','预览停用：'+report.preview.reasonCodes.join('、'),'preview-disabled'));}else handles.push(createPreview(prepared,mode,viewport,{finalSize:m.finalSize,objects:m.objects,font,revision:m.revision,onSelect:e=>select(e.objectId)}));}
  target.append(element('p','配色由人工复核。四幅模拟不生成配色通过结论。','muted'));
